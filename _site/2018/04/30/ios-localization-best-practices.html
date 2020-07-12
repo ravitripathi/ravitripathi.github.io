@@ -40,9 +40,7 @@
 
 <p>iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.</p>
 
-<blockquote>
-  <p>Replace translations to minimise character length variation</p>
-</blockquote>
+<h3 id="replace-translations-to-minimise-character-length-variation">Replace translations to minimise character length variation</h3>
 
 <p>Consider the translation for word “picture” in different languages:</p>
 
@@ -54,21 +52,17 @@
 
 <p>Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.</p>
 
-<blockquote>
-  <p>Culture considerations: Because localization goes beyond translations</p>
-</blockquote>
+<h3 id="culture-considerations-because-localization-goes-beyond-translations">Culture considerations: Because localization goes beyond translations</h3>
 
 <p>An interesting case study in localizing an app for a region is the default stock market app on iOS:</p>
 
-<p><img src="/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg" width="40%" />&lt;/img&gt;
-<img src="/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg" width="40%" />&lt;/img&gt;</p>
+<p><img src="/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg" width="40%" />
+<img src="/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg" width="40%" /></p>
 
 <p>Chinese consider the colour red to be auspicious, hence the colours are switched for Chinese users to indicate positive stocks.
 Thus, if you are building an app which would be made available across nations, it’s always a good idea to take into account the variation in cultures, apart from simply translating your strings.</p>
 
-<blockquote>
-  <p>Colours</p>
-</blockquote>
+<h3 id="colours">Colours</h3>
 
 <p>colorify.it is a free tool by which you can analyse the dominant colours present on a website. I decided to use it to determine the dominant colours on the App Store page for the <a href="https://www.apple.com/itunes/charts/top-grossing-apps/">Top Grosssing Apps</a>. Here’s what I found:</p>
 
@@ -78,9 +72,7 @@ Thus, if you are building an app which would be made available across nations, i
 
 <p>However, it is also important not to go overboard with colours. 1 in 12 men and 1 in 200 women across the world are <a href="http://www.colourblindawareness.org/colour-blindness/">colour blind</a>. Thus, important sections in your app should be accompanied by a textual or graphical context, rather than purely relying on colours to convey the meaning.</p>
 
-<blockquote>
-  <p>Contrast</p>
-</blockquote>
+<h3 id="contrast">Contrast</h3>
 
 <p>Probably the most confusing part for a developer is to decide which colour combinations should be used in displaying various UI elements.</p>
 
@@ -90,15 +82,11 @@ Thus, if you are building an app which would be made available across nations, i
 
 <p>Aviah Morag, a localization expert at Apple, shared a very valuable piece of advice with us :</p>
 
-<blockquote>
-  <p>Localisation is a form of accessibility.</p>
-</blockquote>
+<h3 id="localisation-is-a-form-of-accessibility">Localisation is a form of accessibility.</h3>
 
 <p>Just like high-contrast modes or modes which magnify your screen allow users to use or access your app, localisation enables people to use you app if they do not speak your language. Colours and contrasts tweaked according to the user-base enable people to access your app in a way which makes them comfortable.</p>
 
-<blockquote>
-  <p>Formatters to the Rescue!</p>
-</blockquote>
+<h3 id="formatters-to-the-rescue">Formatters to the Rescue!</h3>
 
 <p>The localization techniques baked right into iOS can be tapped to produce more consistent, easy-to-manage localized strings. So it’s important to leverage them to smoothen out your localization process.</p>
 
@@ -112,9 +100,7 @@ Thus, if you are building an app which would be made available across nations, i
 
 <p>Another use for localization aware formatters is when dealing with <a href="https://developer.apple.com/documentation/foundation/units_and_measurement">measurements and units</a>. You can add, subtract or perform any other arithmetic operation on different measurement scales by using <a href="https://developer.apple.com/documentation/foundation/measurement">Measurement</a> classes, which allow hassle-free unit interoperability.</p>
 
-<blockquote>
-  <p>XLIFF : The Polyglot’s format</p>
-</blockquote>
+<h3 id="xliff--the-polyglots-format">XLIFF : The Polyglot’s format</h3>
 
 <p>Any discussion on iOS localization tricks is incomplete without XLIFF. It’s an is an XML-based format by which you can store and share translations without hassle. XCode provides an easy method for updating your app with appropriate localized strings. All you need to do is export your existing translations as an XLIFF file. You can then pass it to a translator, who can update it with new translations, which you can then re-import to update your translations. As this is a globally accepted standard, and does not require any coding skills, it essentially separates the job of translators and coders, making it easier for them to focus on what they know the best.</p>
 

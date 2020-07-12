@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T22:25:59+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T22:43:27+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Replace translations to minimise character length variation&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;replace-translations-to-minimise-character-length-variation&quot;&gt;Replace translations to minimise character length variation&lt;/h3&gt;
 
 &lt;p&gt;Consider the translation for word “picture” in different languages:&lt;/p&gt;
 
@@ -16,21 +14,17 @@
 
 &lt;p&gt;Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Culture considerations: Because localization goes beyond translations&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;culture-considerations-because-localization-goes-beyond-translations&quot;&gt;Culture considerations: Because localization goes beyond translations&lt;/h3&gt;
 
 &lt;p&gt;An interesting case study in localizing an app for a region is the default stock market app on iOS:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg&quot; width=&quot;40%&quot; /&gt;&amp;lt;/img&amp;gt;
-&lt;img src=&quot;/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg&quot; width=&quot;40%&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg&quot; width=&quot;40%&quot; /&gt;
+&lt;img src=&quot;/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Chinese consider the colour red to be auspicious, hence the colours are switched for Chinese users to indicate positive stocks.
 Thus, if you are building an app which would be made available across nations, it’s always a good idea to take into account the variation in cultures, apart from simply translating your strings.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Colours&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;colours&quot;&gt;Colours&lt;/h3&gt;
 
 &lt;p&gt;colorify.it is a free tool by which you can analyse the dominant colours present on a website. I decided to use it to determine the dominant colours on the App Store page for the &lt;a href=&quot;https://www.apple.com/itunes/charts/top-grossing-apps/&quot;&gt;Top Grosssing Apps&lt;/a&gt;. Here’s what I found:&lt;/p&gt;
 
@@ -40,9 +34,7 @@ Thus, if you are building an app which would be made available across nations, i
 
 &lt;p&gt;However, it is also important not to go overboard with colours. 1 in 12 men and 1 in 200 women across the world are &lt;a href=&quot;http://www.colourblindawareness.org/colour-blindness/&quot;&gt;colour blind&lt;/a&gt;. Thus, important sections in your app should be accompanied by a textual or graphical context, rather than purely relying on colours to convey the meaning.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Contrast&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;contrast&quot;&gt;Contrast&lt;/h3&gt;
 
 &lt;p&gt;Probably the most confusing part for a developer is to decide which colour combinations should be used in displaying various UI elements.&lt;/p&gt;
 
@@ -52,15 +44,11 @@ Thus, if you are building an app which would be made available across nations, i
 
 &lt;p&gt;Aviah Morag, a localization expert at Apple, shared a very valuable piece of advice with us :&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Localisation is a form of accessibility.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;localisation-is-a-form-of-accessibility&quot;&gt;Localisation is a form of accessibility.&lt;/h3&gt;
 
 &lt;p&gt;Just like high-contrast modes or modes which magnify your screen allow users to use or access your app, localisation enables people to use you app if they do not speak your language. Colours and contrasts tweaked according to the user-base enable people to access your app in a way which makes them comfortable.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Formatters to the Rescue!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;formatters-to-the-rescue&quot;&gt;Formatters to the Rescue!&lt;/h3&gt;
 
 &lt;p&gt;The localization techniques baked right into iOS can be tapped to produce more consistent, easy-to-manage localized strings. So it’s important to leverage them to smoothen out your localization process.&lt;/p&gt;
 
@@ -74,9 +62,7 @@ Thus, if you are building an app which would be made available across nations, i
 
 &lt;p&gt;Another use for localization aware formatters is when dealing with &lt;a href=&quot;https://developer.apple.com/documentation/foundation/units_and_measurement&quot;&gt;measurements and units&lt;/a&gt;. You can add, subtract or perform any other arithmetic operation on different measurement scales by using &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurement&quot;&gt;Measurement&lt;/a&gt; classes, which allow hassle-free unit interoperability.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;XLIFF : The Polyglot’s format&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;xliff--the-polyglots-format&quot;&gt;XLIFF : The Polyglot’s format&lt;/h3&gt;
 
 &lt;p&gt;Any discussion on iOS localization tricks is incomplete without XLIFF. It’s an is an XML-based format by which you can store and share translations without hassle. XCode provides an easy method for updating your app with appropriate localized strings. All you need to do is export your existing translations as an XLIFF file. You can then pass it to a translator, who can update it with new translations, which you can then re-import to update your translations. As this is a globally accepted standard, and does not require any coding skills, it essentially separates the job of translators and coders, making it easier for them to focus on what they know the best.&lt;/p&gt;
 
