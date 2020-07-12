@@ -105,6 +105,8 @@ td, th { padding: 0; }
 
 img, embed, object, video { max-width: 100%; }
 
+main { overflow-x: hidden; }
+
 /* Solarized Light 
 For use with Jekyll and Pygments
 http://ethanschoonover.com/solarized
@@ -411,7 +413,7 @@ header .social li i:hover { color: #999; }
 
 .post-container img { margin: 20px 0; }
 
-.navbar { position: absolute; top: 0; right: 5vw; }
+.navbar { display: flex; position: absolute; top: 0; right: 5vw; }
 .navbar a { color: inherit; }
 .navbar ul { list-style-type: none; }
 .navbar ul li { border: 1px solid #fff; float: left; padding: 10px 25px; font-size: 15px; transition: background-color .3s ease-in; }
@@ -419,6 +421,7 @@ header .social li i:hover { color: #999; }
 @media screen and (min-width: 320px) { .navbar ul li { font-size: calc(15px + 2 * ((100vw - 320px) / 960)); } }
 @media screen and (min-width: 1280px) { .navbar ul li { font-size: 17px; } }
 .navbar ul li:hover { background-color: rgba(255, 255, 255, 0.15); cursor: pointer; }
+.navbar ul li.active { background-color: rgba(255, 255, 255, 0.15); }
 
 .texture-black { background-image: url("/assets/textures/black.jpg"); }
 .texture-black h2 { color: #999; }
