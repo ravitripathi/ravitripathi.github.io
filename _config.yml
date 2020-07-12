@@ -20,6 +20,7 @@ plainwhite:
   sitemap: true
   search: true
   show_excerpts: true
+  disqus_shortname: ravitripathi
   # showPicker: true
   dark_mode: true
   # showNav: true
