@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ravi Tripathi | Portfolio</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <!--    Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .modal-open {
+            overflow: hidden;
+        }
+        /*
+        .loader-overlay {
+            width: 100%;
+            height: 100%;
+            background: url('img/Pacman.gif') center no-repeat #FFF;
+            z-index: 99999;
+            position: fixed;
+        }
+*/
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+        jQuery(window).on('load', function () {
+            jQuery(".loader").fadeOut(1000);
+        });
+    </script>
+    <noscript>
+        <style>
+            .loader-overlay {
+                display: none;
+            }
+        </style>
+    </noscript>
+   
+</head>
+
+<body id="page-top" class="index">
+    <!--     Navigation -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!--             Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i> </button> <a class="navbar-brand" href="#page-top">Ravi Tripathi</a> </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll"> <a href="#about">About</a> </li>
+                    <li class="page-scroll"> <a href="#portfolio">Portfolio</a> </li>
+                    <li class="page-scroll"> <a href="#edu">Education</a> </li>
+                    <li class="page-scroll"> <a href="#resume">Resume</a> </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12"> <img class="img-circle" src="https://graph.facebook.com/1171385879556730/picture?type=large" alt="">
+                    <div class="intro-text">
+                        <h1 class="name">Hello, I'm Ravi.</h1>
+                        <hr class="star-light"> <span class="skills">iOS - Android - Everthing else in between</span> </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section class="container" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <!--                    <hr class="star-light">-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>I am an explorer, ready to dabble in anything I find fascinating and rewarding. Passionate about programming, I am equally comfortable with leadership roles. I enjoy experimenting with new development</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>tools and I keep myself up-to-date with the latest in the world of technology. I have been developing Android apps for the past 2 years.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="docs/Ravi%20Tripathi.pdf" class="btn btn-lg btn-outline"> <i class="fa fa-download"></i> Download Resume </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary"> </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/imoonLogo.webp" class="img-responsive" alt="iMoon"> </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/desk.webp" class="img-responsive" alt="SRM Desk"> </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/aaruush.webp" class="img-responsive" alt="Aaruush '16"> </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/fire-icon.jpg" class="img-responsive" alt="Blaze"> </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/mozzo.webp" class="img-responsive" alt="Mozzo"> </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+                        </div> <img src="img/portfolio/winuall.webp" class="img-responsive" alt="Winuall"> </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h5>Certified Android Developer from NPTEL</h5>
+                    <hr class="star-primary">
+                    <div class="row">
+                        <p><i>"Smartphones have emerged as the ubiquitous computing platform. It is expected that by 2020, almost 70% of population will own a smartphone. Android is an open source platform & one of the fastest growing platforms in computing today with 1.4B active users worldwide. In this course, you will learn Android Programming to create applications for smartphones. You will also learn integration of mobile applications with cloud services to create mobile-cloud applications." </i></p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <a href="http://nptel.ac.in/noc/E_Certificate/noc16-cs13/NPTEL16CS1316170196.jpg?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BmHrolXn6RCC6di7QipcmlA%3D%3D" class="btn btn-lg btn-outline"> <i class="fa fa-download"></i> Certification from NPTEL </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    Edu-->
+    <section id="edu" class="success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Education</h2>
+                    <hr class="star-light"> </div>
+                <iframe src="edu.html" width="100%" height="950" frameborder=0 scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+    <!--    <section id="resume">-->
+    <div id="resume" style="overflow:hidden;">
+        <!--            <div class="row">-->
+                <!-- "http://docs.google.com/gview?url=https://ravitripathi.github.io/profile/docs/Ravi%20Tripathi.pdf&embedded=true" -->
+        <iframe src="https://docs.google.com/viewer?embedded=true&url=https://ravitripathi.github.io/profile/docs/Ravi%20Tripathi.pdf" style="width:100%; height:1020px;" frameborder="0"></iframe>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h3>Location</h3>
+                        <p>4A Congo Block
+                            <br>Greenpearl Apartments, TN 603203</p>
+                        <ul class="list-inline">
+                            <li> <a href="https://www.github.com/RT-Git/" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github"></i></a> </li>
+                            <li> <a href="https://www.linkedin.com/in/ravitripathi1996/" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12"> Copyright &copy; Ravi Tripathi 2017 </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top"> <i class="fa fa-chevron-up"></i> </a>
+    </div>
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="modal-body">
+                            <h2>iMoon</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/imoon.webp" class="img-responsive img-centered" alt="">
+                            <p>The National Institute of Ocean Technology, Velachery is an autonomous body under Ministry of Earth Sciences, Govt. of India. NIOT collects data from buoys deployed across Indian Ocean, Bay of Bengal and Arabian Sea under the Ocean Observation Network (OON) programme. iMoon serves as an easy-to-use front-end mobile application for accessing this data.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.wordpress.obliviouscode.imoon">
+                                <button type="button" class="btn btn-default">Play Store</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>SRM Desk</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/srmdesk.webp" class="img-responsive img-centered" alt="">
+                            <p>Desk is SRM University's Official Student-Teacher Interaction App.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.webarchsrm.desk">
+                                <button type="button" class="btn btn-default">Play Store</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Aaruush '16</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/aaruush.webp" class="img-responsive img-centered" alt="">
+                            <p>The official app for Aaruush 2016, the annual technical fest of SRM University, Kattankulathur</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.aaruush16.webarch.aaruush16">
+                                <button type="button" class="btn btn-default">Play Store</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="modal-body">
+                            <h2>Blaze</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/fire-icon.jpg" class="img-responsive img-centered" alt="">
+                            <p>A sample app which implements a couple of Firebase SDK functionalities:
+                                <li>Authenticate and Sign-in using Google Sign-In</li>
+                                <li>Upload Files to Firebase Storage</li>
+                                <li>Retrieve files from Storage using download links stored in Firebase Database</li>
+                                <li>Receive notification on all signed-in devices when upload is made from any one of them (using same account)</li>
+                            </p>
+                            <a href="docs/app-debug.apk">
+                                <button type="button" class="btn btn-default">Download APK</button>
+                            </a>
+                            <a href="https://github.com/RT-Git/Blaze">
+                                <button type="button" class="btn btn-default">GitHub repo</button>
+                            </a>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="modal-body">
+                            <h2>Mozzo</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/mozzodet.webp" class="img-responsive img-centered" alt="">
+                            <p>Worked as an intern at Mozzobytes, on the their food ordering android app "Mozzo". I worked on improving multiple aspects of the app, while gaining experience in building android apps using <b>Kotlin.</b></p>
+                            <a href="https://play.google.com/store/apps/details?id=in.co.mozzo.android&hl=en">
+                                <button type="button" class="btn btn-default">Play Store</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Winuall</h2>
+                            <hr class="star-primary"> <img src="img/portfolio/winualldet.webp" class="img-responsive img-centered" alt="">
+                            <p>Worked as an intern for Winuall, a Kota-based company handling their eponymous education app. The app is used by students preparing for JEE to ask doubts.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.winuall.io">
+                                <button type="button" class="btn btn-default">Play Store</button>
+                            </a>
+                            <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+    
+     <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o)
+                , m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-105624121-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
