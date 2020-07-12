@@ -1,17 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T22:13:40+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/07/12/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-07-12T20:44:15+05:30</published><updated>2020-07-12T20:44:15+05:30</updated><id>http://localhost:4000/jekyll/update/2020/07/12/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/07/12/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T22:25:59+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;p&gt;iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Replace translations to minimise character length variation&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Consider the translation for word “picture” in different languages:&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/ravitripathi/3ac7ab93a1e5cf993d96984c50317284.js&quot;&gt;&lt;/script&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Notice how the count and heigh of characters varies a lot for different languages for the same word. Now if we replace the word picture with an equivalent word “photo”, this is how the translations look:&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;script src=&quot;https://gist.github.com/ravitripathi/adb6eb20740d8434f2f6ba874f429eba.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Culture considerations: Because localization goes beyond translations&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An interesting case study in localizing an app for a region is the default stock market app on iOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg&quot; width=&quot;40%&quot; /&gt;&amp;lt;/img&amp;gt;
+&lt;img src=&quot;/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg&quot; width=&quot;40%&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Chinese consider the colour red to be auspicious, hence the colours are switched for Chinese users to indicate positive stocks.
+Thus, if you are building an app which would be made available across nations, it’s always a good idea to take into account the variation in cultures, apart from simply translating your strings.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Colours&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;colorify.it is a free tool by which you can analyse the dominant colours present on a website. I decided to use it to determine the dominant colours on the App Store page for the &lt;a href=&quot;https://www.apple.com/itunes/charts/top-grossing-apps/&quot;&gt;Top Grosssing Apps&lt;/a&gt;. Here’s what I found:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_butRNlxuP2hsi91l0shNzA.png&quot; alt=&quot;colorify.it&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Blue is the colour of choice for a whole bunch of top rated apps. And there is a sound reason for it. According to &lt;a href=&quot;https://link.springer.com/article/10.1007/s11747-010-0245-y?utmx=5-18&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.2928&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;research&lt;/a&gt; papers, the colour “blue” signifies qualities like &lt;em&gt;calmness&lt;/em&gt;, &lt;em&gt;relaxation&lt;/em&gt; and &lt;em&gt;friendliness&lt;/em&gt;. Thus, it becomes important to utilise the colour pallets to help users understand the intent behind the actions made available to them in your app.&lt;/p&gt;
+
+&lt;p&gt;However, it is also important not to go overboard with colours. 1 in 12 men and 1 in 200 women across the world are &lt;a href=&quot;http://www.colourblindawareness.org/colour-blindness/&quot;&gt;colour blind&lt;/a&gt;. Thus, important sections in your app should be accompanied by a textual or graphical context, rather than purely relying on colours to convey the meaning.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Contrast&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Probably the most confusing part for a developer is to decide which colour combinations should be used in displaying various UI elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_SVtl-UjCnqotFqpiVwkYqw.png&quot; alt=&quot;Contrast buttons&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you think that the button on right looks better, you are in sync with Apple’s &lt;a href=&quot;https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/&quot;&gt;suggested guidelines&lt;/a&gt; for colour contrasts. The button on the right has a contrast ratio of nearly 9.6:1 which is inline which Apple’s suggested minimum contrast ratio of 4.5:1. Having appropriate contrast levels enables users to clearly distinguish between various UI elements.&lt;/p&gt;
+
+&lt;p&gt;Aviah Morag, a localization expert at Apple, shared a very valuable piece of advice with us :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Localisation is a form of accessibility.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Just like high-contrast modes or modes which magnify your screen allow users to use or access your app, localisation enables people to use you app if they do not speak your language. Colours and contrasts tweaked according to the user-base enable people to access your app in a way which makes them comfortable.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Formatters to the Rescue!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The localization techniques baked right into iOS can be tapped to produce more consistent, easy-to-manage localized strings. So it’s important to leverage them to smoothen out your localization process.&lt;/p&gt;
+
+&lt;p&gt;For example, while my name is written as Ravi Tripathi in major regions of the world, some countries, or even specific regions in a country, follow different convention. Thus my name should be displayed as Tripathi Ravi if say, my app were to be distributed in Japan.&lt;/p&gt;
+
+&lt;p&gt;Thus, it’s a good idea to use the &lt;a href=&quot;https://developer.apple.com/documentation/foundation/personnamecomponents&quot;&gt;PersonNameComponent&lt;/a&gt; formatter to get the job done. Just assign the components of a user’s name and your app would reflect the naming conventions used in a region.&lt;/p&gt;
+
+&lt;p&gt;It’s also important how you would use a formatter. For instance, it’s always a good practise to use in-built formats, rather than hard-coding it.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ravitripathi/e0d6abd55bac24a9484a3dfbac981058.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Another use for localization aware formatters is when dealing with &lt;a href=&quot;https://developer.apple.com/documentation/foundation/units_and_measurement&quot;&gt;measurements and units&lt;/a&gt;. You can add, subtract or perform any other arithmetic operation on different measurement scales by using &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurement&quot;&gt;Measurement&lt;/a&gt; classes, which allow hassle-free unit interoperability.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;XLIFF : The Polyglot’s format&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Any discussion on iOS localization tricks is incomplete without XLIFF. It’s an is an XML-based format by which you can store and share translations without hassle. XCode provides an easy method for updating your app with appropriate localized strings. All you need to do is export your existing translations as an XLIFF file. You can then pass it to a translator, who can update it with new translations, which you can then re-import to update your translations. As this is a globally accepted standard, and does not require any coding skills, it essentially separates the job of translators and coders, making it easier for them to focus on what they know the best.&lt;/p&gt;
+
+&lt;p&gt;For a more clear insight on how to use XLIFFs in you projects, check out Apple’s official documentation &lt;a href=&quot;https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Localizing an app is a challenge which is often deemed difficult to overcome. However, which the ever-expanding scope of iOS support for localized text and resources, building your app for a global audience has never been easier.&lt;/p&gt;</content><author><name></name></author><category term="ios-tips" /><summary type="html"></summary></entry></feed>

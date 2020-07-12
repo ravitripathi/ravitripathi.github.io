@@ -4,7 +4,7 @@ email: ravitripathi1996@gmail.com
 description: Ravi Tripathi's Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ravitripathi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: @rhotau
+twitter_username: rhotau
 github_username:  ravitripathi
 
 # Build settings
@@ -26,6 +26,6 @@ texture:
   #     url: "/resume"
 
   social_links:
-    twitter: @rhotau
+    twitter: rhotau
     github:  ravitripathi
     linkedIn: in/ravitripathi1996
