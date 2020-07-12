@@ -11,11 +11,21 @@ iOS provides a brilliant framework for localising your app. While getting starte
 
 Consider the translation for word “picture” in different languages:
 
-<script src="https://gist.github.com/ravitripathi/3ac7ab93a1e5cf993d96984c50317284.js"></script>
+| Language   | Word    |
+|------------|---------|
+| English    | picture |
+| Indonesian | gambar  |
+| French     | image   |
+| Russian    | картина |
 
 Notice how the count and heigh of characters varies a lot for different languages for the same word. Now if we replace the word picture with an equivalent word “photo”, this is how the translations look:
 
-<script src="https://gist.github.com/ravitripathi/adb6eb20740d8434f2f6ba874f429eba.js"></script>
+| Language   | Word    |
+|------------|---------|
+| English    | photo   |
+| Indonesian | foto    |
+| French     | photo   |
+| Russian    | Фото    |
 
 Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.
 
@@ -64,7 +74,15 @@ Thus, it’s a good idea to use the [PersonNameComponent](https://developer.appl
 
 It’s also important how you would use a formatter. For instance, it’s always a good practise to use in-built formats, rather than hard-coding it.
 
-<script src="https://gist.github.com/ravitripathi/e0d6abd55bac24a9484a3dfbac981058.js"></script>
+```
+var formatter = DateFormatter ()
+formatter.timeStyle = "hh mm"
+
+//Instead use this:
+
+var formatter = DateFormatter ()
+formatter.timeStyle = .shortStyle
+```
 
 Another use for localization aware formatters is when dealing with [measurements and units](https://developer.apple.com/documentation/foundation/units_and_measurement). You can add, subtract or perform any other arithmetic operation on different measurement scales by using [Measurement](https://developer.apple.com/documentation/foundation/measurement) classes, which allow hassle-free unit interoperability.
 

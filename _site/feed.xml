@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T22:43:27+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-12T23:27:58+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.&lt;/p&gt;
 
@@ -6,11 +6,61 @@
 
 &lt;p&gt;Consider the translation for word “picture” in different languages:&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/ravitripathi/3ac7ab93a1e5cf993d96984c50317284.js&quot;&gt;&lt;/script&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Language&lt;/th&gt;
+      &lt;th&gt;Word&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;English&lt;/td&gt;
+      &lt;td&gt;picture&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Indonesian&lt;/td&gt;
+      &lt;td&gt;gambar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;French&lt;/td&gt;
+      &lt;td&gt;image&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Russian&lt;/td&gt;
+      &lt;td&gt;картина&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Notice how the count and heigh of characters varies a lot for different languages for the same word. Now if we replace the word picture with an equivalent word “photo”, this is how the translations look:&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/ravitripathi/adb6eb20740d8434f2f6ba874f429eba.js&quot;&gt;&lt;/script&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Language&lt;/th&gt;
+      &lt;th&gt;Word&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;English&lt;/td&gt;
+      &lt;td&gt;photo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Indonesian&lt;/td&gt;
+      &lt;td&gt;foto&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;French&lt;/td&gt;
+      &lt;td&gt;photo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Russian&lt;/td&gt;
+      &lt;td&gt;Фото&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.&lt;/p&gt;
 
@@ -58,7 +108,14 @@ Thus, if you are building an app which would be made available across nations, i
 
 &lt;p&gt;It’s also important how you would use a formatter. For instance, it’s always a good practise to use in-built formats, rather than hard-coding it.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/ravitripathi/e0d6abd55bac24a9484a3dfbac981058.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var formatter = DateFormatter ()
+formatter.timeStyle = &quot;hh mm&quot;
+
+//Instead use this:
+
+var formatter = DateFormatter ()
+formatter.timeStyle = .shortStyle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Another use for localization aware formatters is when dealing with &lt;a href=&quot;https://developer.apple.com/documentation/foundation/units_and_measurement&quot;&gt;measurements and units&lt;/a&gt;. You can add, subtract or perform any other arithmetic operation on different measurement scales by using &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurement&quot;&gt;Measurement&lt;/a&gt; classes, which allow hassle-free unit interoperability.&lt;/p&gt;
 

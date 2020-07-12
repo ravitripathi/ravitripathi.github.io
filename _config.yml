@@ -8,15 +8,19 @@ twitter_username: rhotau
 github_username:  ravitripathi
 
 # Build settings
-remote_theme: thelehhman/texture
+remote_theme: thelehhman/plainwhite-jekyll
 plugins:
   - jekyll-feed
 
-texture:
+plainwhite:
   title: Ravi Tripathi
   tagline: Mobile App Developer
   date_format: "%b %-d, %Y"
-  style: blue
+  # style: black
+  sitemap: true
+  search: true
+  # showPicker: true
+  dark_mode: true
   # showNav: true
   
   # navigation:

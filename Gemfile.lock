@@ -211,6 +211,9 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    plainwhite (0.11)
+      jekyll (>= 3.7.3)
+      jekyll-seo-tag (>= 2.1.0)
     public_suffix (3.1.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -230,9 +233,6 @@ GEM
       faraday (> 0.8, < 2.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    texture (0.4)
-      jekyll (>= 3.7)
-      jekyll-seo-tag (>= 2.1)
     thread_safe (0.3.6)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
@@ -247,7 +247,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
-  texture
+  plainwhite
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
