@@ -19,6 +19,7 @@ plainwhite:
   # style: black
   sitemap: true
   search: true
+  show_excerpts: true
   # showPicker: true
   dark_mode: true
   # showNav: true
