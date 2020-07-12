@@ -1,14 +1,11 @@
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Ravi Tripathi
+email: ravitripathi1996@gmail.com
+description: Ravi Tripathi's Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://ravitripathi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: @rhotau
+github_username:  ravitripathi
 
 # Build settings
 remote_theme: thelehhman/texture
@@ -17,7 +14,7 @@ plugins:
 
 texture:
   title: Ravi Tripathi
-  tagline: Developer. Designer
+  tagline: Mobile App Developer
   date_format: "%b %-d, %Y"
   style: blue
   # showNav: true
@@ -29,6 +26,6 @@ texture:
   #     url: "/resume"
 
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
+    twitter: @rhotau
+    github:  ravitripathi
+    linkedIn: in/ravitripathi1996
