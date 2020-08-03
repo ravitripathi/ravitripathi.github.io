@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Using Environment Object for Reactive Networking</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using Environment Object for Reactive Networking | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Using Environment Object for Reactive Networking" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:" />
+<meta property="og:description" content="Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:" />
+<link rel="canonical" href="http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html" />
+<meta property="og:url" content="http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-02T00:00:00+05:30" />
+<script type="application/ld+json">
+{"headline":"Using Environment Object for Reactive Networking","dateModified":"2018-08-02T00:00:00+05:30","datePublished":"2018-08-02T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html"},"description":"Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:","url":"http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      <a href="/"><img src="/" alt="Ravi Tripathi"></a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      <p class="tagline">Mobile App Developer</p>
+      <ul class="social"><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p>&copy;
+        2020</p><div>
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+      <script type="text/javascript" src="/assets/js/darkmode.js"></script></section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2018/08/02/environment-object-for-reactive-networking.html">
+    <h2 class="post-title">Using Environment Object for Reactive Networking</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Aug 2, 2018</div></div>
+  <div class="post">
+    <p>Traditionally, writing networking code for iOS involved creating one or more <em>Networking Classses</em>. So, after you are done with creating your model objects, you might create a networking class which could look something like this:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">NetworkManager</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">NetworkManager</span><span class="p">()</span>
+    
+     <span class="kd">func</span> <span class="nf">searchRepo</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Repo</span><span class="p">]?)</span><span class="o">-&gt;</span><span class="p">(</span><span class="kt">Void</span><span class="p">))</span> <span class="p">{</span>
+        <span class="o">...</span>
+        <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">requiredURL</span><span class="p">)</span> <span class="p">{</span> 								<span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">httpResponse</span> <span class="o">=</span> <span class="n">response</span> <span class="k">as?</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span>
+                  <span class="p">(</span><span class="mi">200</span><span class="o">...</span><span class="mi">299</span><span class="p">)</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">httpResponse</span><span class="o">.</span><span class="n">statusCode</span><span class="p">),</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">decodedResponse</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">JSONDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">([</span><span class="kt">Repo</span><span class="p">]</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="n">decodedResponse</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Or you might use a networking library like Alamofire for this purpose. Either way, the structure remains pretty much the same, a closure which provides you with the result of your call. But while working with SwiftUI, you might find this networking closure to be a bit clunky:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">YourView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="kt">ViewModel</span>
+    <span class="kd">@State</span> <span class="k">var</span> <span class="nv">list</span><span class="p">:</span> <span class="p">[</span><span class="kt">Repo</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+      <span class="kt">List</span><span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="p">{</span> <span class="n">repo</span> <span class="k">in</span>
+        <span class="c1">//Your row</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+            <span class="n">viewModel</span><span class="o">.</span><span class="n">fetchRepos</span> <span class="p">{</span> <span class="p">(</span><span class="n">repoList</span><span class="p">)</span> <span class="k">in</span>
+                <span class="k">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="n">repoList</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You rely on settig a <code class="language-plaintext highlighter-rouge">@State</code> property to refresh your view after the closure returns. Also, if you have multiple views which utilize the same datasource, you might end up either making the same API call mutliple times, or building a complex mesh of initialzer where you pass the required object from one view to another.</p>
+
+<p>However, SwiftUI has tools which make it easier for you to share data across views, and make reactive bindings around them to ensure your views update when the data changes. Which brings us to one such tool, the <code class="language-plaintext highlighter-rouge">EnvironmentObject</code></p>
+
+<h2 id="environmentobject-and-networkstore">EnvironmentObject and NetworkStore</h2>
+
+<p>First, lets build a <code class="language-plaintext highlighter-rouge">NetworkStore</code></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Combine</span>
+
+<span class="kd">class</span> <span class="kt">NetworkStore</span><span class="p">:</span> <span class="kt">ObservableObject</span> <span class="p">{</span>
+    <span class="kd">@Published</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">repos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Repo</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="kd">@Published</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isLoadingRepos</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="kd">func</span> <span class="nf">fetch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="kt">NetworkManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">getRepoList</span> <span class="p">{</span> <span class="p">(</span><span class="n">repos</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Void</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">repos</span> <span class="o">=</span> <span class="n">repos</span> <span class="p">{</span>
+                <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">repos</span> <span class="o">=</span> <span class="n">repos</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="o">=</span> <span class="kc">false</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Calling <code class="language-plaintext highlighter-rouge">fetch</code> gets the list of GitHub repos, and assigns it to the <code class="language-plaintext highlighter-rouge">repos</code> property. A boolean property <code class="language-plaintext highlighter-rouge">isLoadingRepos</code> keeps track of the status of the network call.</p>
+
+<p><code class="language-plaintext highlighter-rouge">NetworkStore</code> is an <code class="language-plaintext highlighter-rouge">ObservableObject</code> allowing it to be passed along as an <code class="language-plaintext highlighter-rouge">EnvironmentObject</code>. But what exactly is that? From the docs:</p>
+
+<blockquote>
+  <p>An environment object invalidates the current view whenever the observable object changes.</p>
+</blockquote>
+
+<p>Perfect for our usecase!</p>
+
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html';
+      this.page.identifier = 'http://localhost:4000/2018/08/02/environment-object-for-reactive-networking.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+  </main>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

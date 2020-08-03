@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
 <body>
   <main class="container">
     <section class="about">
-      <a href="/"><img src="/assets/portfolio.png" alt="Ravi Tripathi"></a>
+      <a href="/"><img src="/" alt="Ravi Tripathi"></a>
       <h2 id="title">
         <a href="/">Ravi Tripathi</a>
       </h2>
@@ -195,7 +195,21 @@ formatter.timeStyle = .shortStyle
 <p>Localizing an app is a challenge which is often deemed difficult to overcome. However, which the ever-expanding scope of iOS support for localized text and resources, building your app for a global audience has never been easier.</p>
 
 
-  </div></div>
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/2018/04/30/ios-localization-best-practices.html';
+      this.page.identifier = 'http://localhost:4000/2018/04/30/ios-localization-best-practices.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
 
     </section>
   </main>
