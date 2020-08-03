@@ -1,8 +1,7 @@
 ---
-title:  Using Environment Object for Reactive Networking
-date: 2018-08-02 00:00:00 +0530
+title:  Using Environment Object for Reactive Views
+date: 2020-08-02 00:00:00 +0530
 tags: [swiftui, combine]
-
 ---
 
 Traditionally, writing networking code for iOS involved creating one or more _Networking Classses_. So, after you are done with creating your model objects, you might create a networking class which could look something like this:
@@ -93,5 +92,5 @@ Calling `fetch` gets the list of GitHub repos, and assigns it to the `repos` pro
 
 
 
-Perfect for our usecase!
+Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.
 
