@@ -16,6 +16,7 @@ plainwhite:
   name: Ravi Tripathi
   tagline: Mobile App Developer
   date_format: "%b %-d, %Y"
+  portfolio_image: "assets/portfolio.png" 
   # style: black
   sitemap: true
   search: true
