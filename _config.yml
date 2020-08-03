@@ -24,6 +24,7 @@ plainwhite:
   disqus_shortname: ravitripathi
   # showPicker: true
   dark_mode: true
+  analytics_id: "UA-105624121-2"
   # showNav: true
   
   # navigation:
