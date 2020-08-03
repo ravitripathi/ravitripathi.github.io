@@ -142,6 +142,58 @@
 
 <p>Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.</p>
 
+<ul>
+  <li>
+    <p>Injecting into a view:</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">YourView</span><span class="p">()</span><span class="o">.</span><span class="nf">environmentObject</span><span class="p">(</span><span class="kt">NetworkStore</span><span class="p">())</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Injecting app-wide:</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. You can also use the App/Scene Delegate for injecting an environment object.</span>
+  
+<span class="kd">@main</span>
+<span class="kd">struct</span> <span class="kt">YourAppName</span><span class="p">:</span> <span class="kt">App</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">Scene</span> <span class="p">{</span>
+        <span class="kt">WindowGroup</span> <span class="p">{</span>
+            <span class="kt">ContentView</span><span class="p">()</span>
+                <span class="o">.</span><span class="nf">environmentObject</span><span class="p">(</span><span class="kt">NetworkStore</span><span class="p">())</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>You can then use it any number of your views:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MainView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kd">@EnvironmentObject</span> <span class="k">var</span> <span class="nv">netStore</span><span class="p">:</span> <span class="kt">NetworkStore</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">ScrollView</span><span class="p">(</span><span class="o">.</span><span class="n">horizontal</span><span class="p">,</span> <span class="nv">showsIndicators</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">HStack</span><span class="p">{</span>
+                <span class="k">if</span> <span class="n">netStore</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="p">{</span>
+                    <span class="kt">ProgressView</span><span class="p">()</span>
+                        <span class="o">.</span><span class="nf">progressViewStyle</span><span class="p">(</span><span class="kt">CircularProgressViewStyle</span><span class="p">())</span>
+                <span class="p">}</span>
+                <span class="kt">ForEach</span><span class="p">(</span><span class="n">netStore</span><span class="o">.</span><span class="n">repos</span><span class="p">)</span> <span class="p">{</span> <span class="n">repo</span> <span class="k">in</span>
+                    <span class="c1">// add a view</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+          <span class="n">netStore</span><span class="o">.</span><span class="nf">fetch</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This frees you from making networking call in a specific view. You can call <code class="language-plaintext highlighter-rouge">netStore.fetch()</code> from any view, and every view which requires the repository list automatically gets updated, as long as it uses the NetworkStore environment object.</p>
+
+<hr />
+
+<p>SwiftUI and Combine complement each other in many ways, and can be mixed and matched to build complex, reactive views with  reduced efforts. You can check out my <a href="https://github.com/ravitripathi/GitBrowser">GitBrowser</a> app, a simple Github client which displays your followers and public repositories, built on pure SwiftUI (Requires Xcode 12 beta to run).</p>
 
   </div><div id="disqus_thread" style="margin-top:25px"></div>
   <script>

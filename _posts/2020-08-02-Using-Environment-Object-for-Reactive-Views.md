@@ -94,3 +94,59 @@ Calling `fetch` gets the list of GitHub repos, and assigns it to the `repos` pro
 
 Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.
 
+- Injecting into a view: 
+
+  ```swift
+  YourView().environmentObject(NetworkStore())
+  ```
+
+- Injecting app-wide:
+
+  ```swift
+  //Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. You can also use the App/Scene Delegate for injecting an environment object.
+  
+  @main
+  struct YourAppName: App {
+      var body: some Scene {
+          WindowGroup {
+              ContentView()
+                  .environmentObject(NetworkStore())
+          }
+      }
+  }
+  ```
+
+
+
+You can then use it any number of your views:
+
+
+
+```swift
+struct MainView: View {
+    @EnvironmentObject var netStore: NetworkStore
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack{
+                if netStore.isLoadingRepos {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+                ForEach(netStore.repos) { repo in
+                    // add a view
+                }
+            }
+        }.onAppear {
+          netStore.fetch()
+        }
+    }
+}
+```
+
+
+
+This frees you from making networking call in a specific view. You can call `netStore.fetch()` from any view, and every view which requires the repository list automatically gets updated, as long as it uses the NetworkStore environment object.
+
+----
+
+SwiftUI and Combine complement each other in many ways, and can be mixed and matched to build complex, reactive views with  reduced efforts. You can check out my [GitBrowser](https://github.com/ravitripathi/GitBrowser) app, a simple Github client which displays your followers and public repositories, built on pure SwiftUI (Requires Xcode 12 beta to run).

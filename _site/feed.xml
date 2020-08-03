@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-03T15:43:01+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">Using Environment Object for Reactive Views</title><link href="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" rel="alternate" type="text/html" title="Using Environment Object for Reactive Views" /><published>2020-08-02T00:00:00+05:30</published><updated>2020-08-02T00:00:00+05:30</updated><id>http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views</id><content type="html" xml:base="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html">&lt;p&gt;Traditionally, writing networking code for iOS involved creating one or more &lt;em&gt;Networking Classses&lt;/em&gt;. So, after you are done with creating your model objects, you might create a networking class which could look something like this:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-03T16:04:43+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi's Blog</subtitle><entry><title type="html">Using Environment Object for Reactive Views</title><link href="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" rel="alternate" type="text/html" title="Using Environment Object for Reactive Views" /><published>2020-08-02T00:00:00+05:30</published><updated>2020-08-02T00:00:00+05:30</updated><id>http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views</id><content type="html" xml:base="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html">&lt;p&gt;Traditionally, writing networking code for iOS involved creating one or more &lt;em&gt;Networking Classses&lt;/em&gt;. So, after you are done with creating your model objects, you might create a networking class which could look something like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkManager&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;shared&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -75,7 +75,60 @@
   &lt;p&gt;An environment object invalidates the current view whenever the observable object changes.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.&lt;/p&gt;</content><author><name></name></author><category term="swiftui" /><category term="combine" /><summary type="html">Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:</summary></entry><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Injecting into a view:&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;YourView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environmentObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Injecting app-wide:&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. You can also use the App/Scene Delegate for injecting an environment object.&lt;/span&gt;
+  
+&lt;span class=&quot;kd&quot;&gt;@main&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;YourAppName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Scene&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;WindowGroup&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environmentObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can then use it any number of your views:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MainView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;@EnvironmentObject&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;ScrollView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;showsIndicators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isLoadingRepos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kt&quot;&gt;ProgressView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;progressViewStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CircularProgressViewStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+                    &lt;span class=&quot;c1&quot;&gt;// add a view&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAppear&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This frees you from making networking call in a specific view. You can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netStore.fetch()&lt;/code&gt; from any view, and every view which requires the repository list automatically gets updated, as long as it uses the NetworkStore environment object.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;SwiftUI and Combine complement each other in many ways, and can be mixed and matched to build complex, reactive views with  reduced efforts. You can check out my &lt;a href=&quot;https://github.com/ravitripathi/GitBrowser&quot;&gt;GitBrowser&lt;/a&gt; app, a simple Github client which displays your followers and public repositories, built on pure SwiftUI (Requires Xcode 12 beta to run).&lt;/p&gt;</content><author><name></name></author><category term="swiftui" /><category term="combine" /><summary type="html">Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:</summary></entry><entry><title type="html">iOS Localization Best Practices</title><link href="http://localhost:4000/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>http://localhost:4000/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="http://localhost:4000/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.&lt;/p&gt;
 
