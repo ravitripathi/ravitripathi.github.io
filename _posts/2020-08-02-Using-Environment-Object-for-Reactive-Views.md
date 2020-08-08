@@ -12,7 +12,8 @@ class NetworkManager {
     
      func searchRepo(withName name: String, userName: String, completion: @escaping ([Repo]?)->(Void)) {
         ...
-        let task = URLSession(configuration: URLSessionConfiguration.default).dataTask(with: requiredURL) { 								(data, response, error) in
+        let task = URLSession(configuration: URLSessionConfiguration.default).dataTask(with: requiredURL) {
+            (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode), let data = data else {
                 completion(nil)
@@ -103,7 +104,8 @@ Perfect for our usecase! An environment object can be injected into a view via i
 - Injecting app-wide:
 
   ```swift
-  //Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. You can also use the App/Scene Delegate for injecting an environment object.
+  // Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. 
+  // You can also use the App/Scene Delegate for injecting an environment object.
   
   @main
   struct YourAppName: App {
