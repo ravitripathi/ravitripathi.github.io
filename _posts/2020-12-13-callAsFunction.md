@@ -69,6 +69,7 @@ var str = """
 }
 """
 
+
 if let jsonUtil = try? JsonUtility(withString: str) {
     let htmlUrlString = jsonUtil.lookup(key: "html_url") //  "https://github.com/ravitripathi"
 }
@@ -109,7 +110,7 @@ jsonUtil(findKeyForValue: "https://api.github.com/users/ravitripathi/repos") // 
 
 Often, you might have many nominal types, that have a "primary method" that performs their main use. For example, a calculator class which mostly calls a specific function.
 ```swift
-calculator.calculating(query).
+calculator.calculating(query)
 ```
 
 Since a primary function like this one would be called frequently, `callAsFunction` simplifies the expression used for it.
