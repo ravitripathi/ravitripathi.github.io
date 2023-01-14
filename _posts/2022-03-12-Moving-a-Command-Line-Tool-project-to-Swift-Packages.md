@@ -76,3 +76,5 @@ For distributing your shiny new executable, you can use tools like `homebrew` or
 ----
 
 SPM now makes it easy to manage and write tests for a command line tool written in Swift. And with tools like [swift-test-codecov](https://github.com/mattpolzin/swift-test-codecov), [upx](https://github.com/upx/upx) and [Mint](https://github.com/yonaskolb/Mint), you can generate coverage reports for your project, optimize the size of your executable, and provide an easy way to distribute it.
+
+> This post was later published on the [Gojek engineering blog](https://medium.com/gojekengineering/migrating-an-xcode-command-line-tool-project-to-spm-47c5df36c54a) as well
