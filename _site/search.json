@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Modifying Runpath for a compiled swift macOS binary",
+      "category" : "",
+      "tags"     : "swift, SPM, Command Line Tools",
+      "url"      : "/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html",
+      "date"     : "2023-01-14 19:30:00 +0530"
+    } ,
+  
+    {
       "title"    : "Moving a Command Line Tool project to Swift Packages",
       "category" : "",
       "tags"     : "swift, SPM, Command Line Tools",
