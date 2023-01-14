@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Moving a Command Line Tool project to Swift Packages</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Moving a Command Line Tool project to Swift Packages | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Moving a Command Line Tool project to Swift Packages" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ravi Tripathi’s Blog" />
+<meta property="og:description" content="Ravi Tripathi’s Blog" />
+<link rel="canonical" href="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-12T18:30:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Moving a Command Line Tool project to Swift Packages" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-12T18:30:00+05:30","datePublished":"2022-03-12T18:30:00+05:30","description":"Ravi Tripathi’s Blog","headline":"Moving a Command Line Tool project to Swift Packages","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html"},"url":"https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html">
+    <h2 class="post-title">Moving a Command Line Tool project to Swift Packages</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Mar 12, 2022</div></div>
+  <div class="post">
+    <p><img src="/assets/postAssets/swiftpackage.jpeg" alt="Swift Package" /></p>
+
+<p>Creating an executable Swift Package is a great way to quickly build a command line tool for folks familiar with the language. <a href="https://www.avanderlee.com">Antoine van der Lee</a> has written a <a href="https://www.avanderlee.com/swift/command-line-tool-package-manager/">great article</a> on getting started with one.</p>
+
+<p>I recently moved an internal <a href="https://www.gojek.io/blog/using-custom-lint-rules-to-improve-our-dls-coverage">command line tool</a> which we use here at Gojek to a Swift Package from an Xcode Project. Moving away from an Xcode project presented some difficulties, requiring some workarounds which I would talk about in this post. But before jumping into that, let’s address a common query.</p>
+
+<h3 id="but-why-not-stick-to-an-xcode-command-line-target">But why not stick to an Xcode Command Line Target?</h3>
+
+<p>Using SPM for building a command line tool instead of an Xcode Command Line target has some benefits:</p>
+
+<ul>
+  <li>
+    <p>Since the Swift Toolchain is <a href="https://www.swift.org/getting-started/">available on Windows and Linux</a>, you can compile your Swift Package on these platforms without any Xcode-specific tools. Use <code class="language-plaintext highlighter-rouge">swift build</code> and <code class="language-plaintext highlighter-rouge">swift test</code> to build and test a swift package respectively.</p>
+  </li>
+  <li>
+    <p>Adding test cases for Command Line Tool target in Xcode <a href="https://developer.apple.com/forums/thread/52211">has some caveats</a>, and often involves creating a separate dynamic framework for enclosing your core logic so that it can be unit tested independently. This is not a problem with Swift Packages, where a test target can be added for an executable.</p>
+  </li>
+</ul>
+
+<p>A command line tool is usually a single compiled executable, and having an additional <code class="language-plaintext highlighter-rouge">.framework</code> carrying the core logic makes it difficult to distribute. It also makes further optimizations difficult.</p>
+
+<p>However, tools associated with Xcode are more mature when compared to SPM, which can make it difficult to migrate projects.</p>
+
+<h3 id="moving-to-spm">Moving to SPM</h3>
+
+<p>This was really straightforward. In a new directory, I ran:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swift package init --type executable &lt;Your_Executable_Name&gt;
+</code></pre></div></div>
+
+<p>This generates the <code class="language-plaintext highlighter-rouge">Sources</code> and <code class="language-plaintext highlighter-rouge">Tests</code> directory, a <code class="language-plaintext highlighter-rouge">README.md</code> and a <code class="language-plaintext highlighter-rouge">Package.swift</code> file. All I had to do was move the project files into <code class="language-plaintext highlighter-rouge">Sources</code> and the tests into <code class="language-plaintext highlighter-rouge">Tests</code> directory respectively.</p>
+
+<p>Opening the <code class="language-plaintext highlighter-rouge">Package.swift</code> launches Xcode. After adding the dependencies in the <code class="language-plaintext highlighter-rouge">Package.swift</code> file, I was good to go.</p>
+
+<h3 id="coverage-reports-for-swift-packages">Coverage Reports for Swift Packages</h3>
+
+<p>While Xcode displays code coverage percentage for both SPM-based and <code class="language-plaintext highlighter-rouge">.xcodeproj</code> projects within the IDE, many teams rely on tools like <a href="https://github.com/fastlane-community/xcov">xcov</a> to generate test coverage reports, and even fail CI/CD pipelines if the total coverage drops below a certain limit. This is where I hit my first wall.</p>
+
+<p>Unlike Xcode Projects, no <code class="language-plaintext highlighter-rouge">.xccoverage</code> files are generated while running tests for a Swift Package. Instead, SPM generates a <code class="language-plaintext highlighter-rouge">.json</code> file containing the coverage data, which is not compatible with Xcov. I had no way to check the coverage percentage on a CI job.</p>
+
+<p>Thankfully, I stumbled upon <a href="https://github.com/mattpolzin/swift-test-codecov">swift-test-codecov</a>, another command line swift package which can parse this json and generate a table containing coverage results. Coupling this with <a href="https://github.com/yonaskolb/Mint">Mint</a> allowed me to parse the coverage report on CI:</p>
+
+<center>
+<iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;t=seti&amp;wt=none&amp;l=application%2Fx-sh&amp;width=850&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=false&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%253E%2520mint%2520run%2520swift-test-codecov%2520.%252F.build%252Fdebug%252Fcodecov%252FSonar.json%2520-p%2520table%2520--removetestfiles%250A%250A%25F0%259F%258C%25B1%2520Finding%2520latest%2520version%2520of%2520swift-test-codecov%250A%25F0%259F%258C%25B1%2520Running%2520swift-test-codecov%25200.10.2...%250A%250AOverall%2520Coverage%253A%252065.44%2525%250A%250AFile%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Coverage%250A------------------------------------%2520--------%250A%253CREDACTED_NAME%253E.swift%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252097.37%2525%250A....." style="width: 900px; height: 373px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</center>
+
+<h3 id="exporting-the-final-executable">Exporting the final executable</h3>
+
+<p>This was the easy part. <code class="language-plaintext highlighter-rouge">swift build --configuration release</code> builds the project and generates the executable inside the <code class="language-plaintext highlighter-rouge">.build/release</code> directory. And that’s it! Copy the executable to <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> and you are good to go.</p>
+
+<p>However, even on release configuration, the final executable size was well above 12 MB. Quite high for a command line utility. I began looking for ways to compress an executable</p>
+
+<h3 id="upx-ftw-">UPX FTW 🚀</h3>
+
+<p><a href="https://github.com/upx/upx">upx</a> is powerful tool which can compress executables on Windows, macOS and Linux. This was perfect for my use case. Running upx brought down the final executable size from <code class="language-plaintext highlighter-rouge">13.7 MB</code> to <code class="language-plaintext highlighter-rouge">3.2 MB</code>, a 76% decrease!!</p>
+
+<h3 id="ship-it-">Ship it 📦</h3>
+
+<p>For installing locally, a shell script can encapsulate all the steps needed for building and moving the final executable to <code class="language-plaintext highlighter-rouge">/usr/local/bin</code>:</p>
+<center>
+<iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;t=cobalt&amp;wt=none&amp;l=application%2Fx-sh&amp;width=858&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=false&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2523%21%252Fbin%252Fsh%250A%250Aswift%2520build%2520--configuration%2520release%250Aupx%2520.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%250Acp%2520%2522.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%2522%2520%252Fusr%252Flocal%252Fbin" style="width: 560px; height: 271px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</center>
+
+<p>For distributing your shiny new executable, you can use tools like <code class="language-plaintext highlighter-rouge">homebrew</code> or just provide a download link on your website. If you have a single Package in your repo, you use <a href="https://github.com/yonaskolb/Mint">Mint</a> to distribute your tool right away, without any modifications.</p>
+
+<hr />
+
+<p>SPM now makes it easy to manage and write tests for a command line tool written in Swift. And with tools like <a href="https://github.com/mattpolzin/swift-test-codecov">swift-test-codecov</a>, <a href="https://github.com/upx/upx">upx</a> and <a href="https://github.com/yonaskolb/Mint">Mint</a>, you can generate coverage reports for your project, optimize the size of your executable, and provide an easy way to distribute it.</p>
+
+<blockquote>
+  <p>This post was later published on the <a href="https://medium.com/gojekengineering/migrating-an-xcode-command-line-tool-project-to-spm-47c5df36c54a">Gojek engineering blog</a> as well</p>
+</blockquote>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-105624121-2');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

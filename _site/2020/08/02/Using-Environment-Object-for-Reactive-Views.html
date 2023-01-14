@@ -7,32 +7,43 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <title>Using Environment Object for Reactive Views</title>
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Using Environment Object for Reactive Views | Ravi Tripathi</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Using Environment Object for Reactive Views" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:" />
 <meta property="og:description" content="Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:" />
-<link rel="canonical" href="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" />
-<meta property="og:url" content="http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" />
+<link rel="canonical" href="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" />
 <meta property="og:site_name" content="Ravi Tripathi" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-08-02T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using Environment Object for Reactive Views" />
 <script type="application/ld+json">
-{"headline":"Using Environment Object for Reactive Views","dateModified":"2020-08-02T00:00:00+05:30","datePublished":"2020-08-02T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html"},"description":"Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:","url":"http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-08-02T00:00:00+05:30","datePublished":"2020-08-02T00:00:00+05:30","description":"Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:","headline":"Using Environment Object for Reactive Views","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html"},"url":"https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html"}</script>
 <!-- End Jekyll SEO tag -->
-</head>
 
-<body>
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
   <main class="container">
     <section class="about">
-      <a href="/"><img src="/assets/portfolio.png" alt="Ravi Tripathi"></a>
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
       <h2 id="title">
         <a href="/">Ravi Tripathi</a>
       </h2>
-      <p class="tagline">Mobile App Developer</p>
-      <ul class="social"><a href="https://github.com/ravitripathi" target="_blank">
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
           <li>
             <i class="icon-github-circled"></i>
           </li>
@@ -44,17 +55,17 @@
           <li>
             <i class="icon-twitter-squared"></i>
           </li>
-        </a></ul><p>&copy;
-        2020</p><div>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
         <p>Dark Mode
           <i class="icon-moon"></i>
           <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
+            <input type="checkbox" class="dark-mode-toggle">
             <span class="slider round" onclick="toggleDarkMode()"></span>
           </label>
         </p>
       </div>
-      <script type="text/javascript" src="/assets/js/darkmode.js"></script></section>
+    </section>
     <section class="content">
       <div class="post-container">
   <a class="post-link" href="/2020/08/02/Using-Environment-Object-for-Reactive-Views.html">
@@ -70,7 +81,8 @@
     
      <span class="kd">func</span> <span class="nf">searchRepo</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Repo</span><span class="p">]?)</span><span class="o">-&gt;</span><span class="p">(</span><span class="kt">Void</span><span class="p">))</span> <span class="p">{</span>
         <span class="o">...</span>
-        <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">requiredURL</span><span class="p">)</span> <span class="p">{</span> 								<span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">requiredURL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
             <span class="k">guard</span> <span class="k">let</span> <span class="nv">httpResponse</span> <span class="o">=</span> <span class="n">response</span> <span class="k">as?</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span>
                   <span class="p">(</span><span class="mi">200</span><span class="o">...</span><span class="mi">299</span><span class="p">)</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">httpResponse</span><span class="o">.</span><span class="n">statusCode</span><span class="p">),</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
                 <span class="nf">completion</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
@@ -152,7 +164,8 @@
   <li>
     <p>Injecting app-wide:</p>
 
-    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. You can also use the App/Scene Delegate for injecting an environment object.</span>
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. </span>
+<span class="c1">// You can also use the App/Scene Delegate for injecting an environment object.</span>
   
 <span class="kd">@main</span>
 <span class="kd">struct</span> <span class="kt">YourAppName</span><span class="p">:</span> <span class="kt">App</span> <span class="p">{</span>
@@ -198,8 +211,8 @@
   </div><div id="disqus_thread" style="margin-top:25px"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html';
-      this.page.identifier = 'http://localhost:4000/2020/08/02/Using-Environment-Object-for-Reactive-Views.html';
+      this.page.url = 'https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html';
     };
     (function () {
       var d = document, s = d.createElement('script');
@@ -212,7 +225,34 @@
       powered by Disqus.</a></noscript></div>
 
     </section>
-  </main><script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Haptic Feedback on iOS</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Haptic Feedback on iOS | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Haptic Feedback on iOS" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the “Taptic Engine”, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them." />
+<meta property="og:description" content="Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the “Taptic Engine”, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them." />
+<link rel="canonical" href="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-15T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Haptic Feedback on iOS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-03-15T00:00:00+05:30","datePublished":"2021-03-15T00:00:00+05:30","description":"Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the “Taptic Engine”, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.","headline":"Haptic Feedback on iOS","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html"},"url":"https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2021/03/15/Haptic-Feedback-on-iOS.html">
+    <h2 class="post-title">Haptic Feedback on iOS</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Mar 15, 2021</div></div>
+  <div class="post">
+    <p>Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the <em>“Taptic Engine”</em>, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.</p>
+
+<h2 id="uifeedbackgenerator"><code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code></h2>
+
+<p>Quoting <a href="https://developer.apple.com/documentation/uikit/uifeedbackgenerator">the docs</a>, <code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code> is <em>the abstract superclass for all feedback generators.</em> You can use one of the concrete subclasses of <code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code> to generate a vibration feedback:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code></li>
+  <li><code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code></li>
+  <li><code class="language-plaintext highlighter-rouge">UISelectionFeedbackGenerator</code></li>
+</ul>
+
+<h3 id="uinotificationfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code></h3>
+
+<p>As the name suggests, this class is used to give user feedback when an notification is displayed. It provides vibration feedbacks for 3 scenarios, <code class="language-plaintext highlighter-rouge">.success</code>, <code class="language-plaintext highlighter-rouge">.warning</code> and <code class="language-plaintext highlighter-rouge">.error</code>.</p>
+
+<p><img src="/assets/postAssets/errorKeyFrame.gif" alt="Error Animation" /></p>
+
+<p>Animations like these are often used to draw a user’s attention to the screen in scenarios where a provided input may be incorrect. A vibration feedback similar to one provided when an incorrect password is entered on the lockscreen can be added by simply calling:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">generator</span> <span class="o">=</span> <span class="kt">UINotificationFeedbackGenerator</span><span class="p">()</span>
+<span class="n">generator</span><span class="o">.</span><span class="nf">notificationOccurred</span><span class="p">(</span><span class="o">.</span><span class="n">error</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="uiimpactfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code></h3>
+
+<p>When building views which collide with each other or the screen bounds, <code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code> allows you to add vibration feedback analogous to the perceived weight of the component.</p>
+
+<p><img src="/assets/postAssets/bounceanimation.gif" alt="Bounce Animation" /></p>
+
+<p>A large view like this one can be timed to generate a strong vibration feedback every time it touches the screen’s bottom bound. Again, the call for generating an impact feedback is very straightforward:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">impactGenerator</span> <span class="o">=</span> <span class="kt">UIImpactFeedbackGenerator</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">heavy</span><span class="p">)</span>
+<span class="n">impactGenerator</span><span class="o">.</span><span class="nf">impactOccurred</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="uiselectionfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UISelectionFeedbackGenerator</code></h3>
+
+<p>Selection feedback is perhaps the most frequently encountered haptic feedback on iOS. Switching between menus and toggling views which indicate state are perfect places for generating a selection feedback.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">let</span> <span class="nv">selectionGenerator</span> <span class="o">=</span> <span class="kt">UISelectionFeedbackGenerator</span><span class="p">()</span>
+ <span class="n">selectionGenerator</span><span class="o">.</span><span class="nf">selectionChanged</span><span class="p">()</span>
+</code></pre></div></div>
+<p>
+    <img src="/assets/postAssets/iospicker.gif" alt="" />
+    <br />
+    <em>The iOS time picker provides a subtle feedback vibration on selection change</em>
+</p>
+
+<h2 id="but-why-should-i-add-haptic-feedback-to-my-app">But why should I add haptic feedback to my app?</h2>
+
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">Haptics</a> enhance a user’s experience by providing tactile feedback. Also, in case of <code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code>, they direct a user’s attention to important events happening on screen discretely.</p>
+
+<p>Also, haptic feedbacks make your app more accessible by helping people interact with it when they have difficulty in seeing the screen, which is also mentioned by Apple on their <a href="https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/user-interaction/">Human Interface Guidelines</a>.</p>
+
+<p>A more detailed discussion, complete with sound recordings depicting various feedback types, <a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">can be found here</a>.</p>
+
+<p>Haptics are an underused gem which can enrich user experience and improve accessibility while adding a very low performance and code overhead.</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-105624121-2');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>TILSwift - callAsFunction</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TILSwift - callAsFunction | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="TILSwift - callAsFunction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, callAsFunction." />
+<meta property="og:description" content="Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, callAsFunction." />
+<link rel="canonical" href="https://ravitripathi.github.io/2020/12/13/callAsFunction.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2020/12/13/callAsFunction.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-13T20:32:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TILSwift - callAsFunction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-12-13T20:32:00+05:30","datePublished":"2020-12-13T20:32:00+05:30","description":"Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, callAsFunction.","headline":"TILSwift - callAsFunction","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2020/12/13/callAsFunction.html"},"url":"https://ravitripathi.github.io/2020/12/13/callAsFunction.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2020/12/13/callAsFunction.html">
+    <h2 class="post-title">TILSwift - callAsFunction</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Dec 13, 2020</div></div>
+  <div class="post">
+    <p>Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, <code class="language-plaintext highlighter-rouge">callAsFunction</code>.</p>
+
+<p>Introduced in <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">Swift 5.2</a>, <code class="language-plaintext highlighter-rouge">callAsFunction</code> provides a way to call values as functions. An instance of a <code class="language-plaintext highlighter-rouge">class</code> or <code class="language-plaintext highlighter-rouge">struct</code> can be called as a function if it contains a <code class="language-plaintext highlighter-rouge">callAsFunction</code> method.</p>
+
+<p>Let’s dig into this by first starting off with a simple class, <code class="language-plaintext highlighter-rouge">JsonUtility</code>, which can be initialized with a raw JSON <code class="language-plaintext highlighter-rouge">String</code>. It contains a <code class="language-plaintext highlighter-rouge">lookup(key:)</code> function which can recursively check for the value for a given key in the JSON:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">JsonUtilityError</span><span class="p">:</span> <span class="kt">Error</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nf">initError</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">JsonUtility</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">generatedDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="n">withString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="kt">JsonUtilityError</span><span class="o">.</span><span class="nf">initError</span><span class="p">(</span><span class="s">"Can't extract data from string"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">let</span> <span class="nv">obj</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[])</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">dict</span> <span class="o">=</span> <span class="n">obj</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="kt">JsonUtilityError</span><span class="o">.</span><span class="nf">initError</span><span class="p">(</span><span class="s">"JSON invalid"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">generatedDict</span> <span class="o">=</span> <span class="n">dict</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">generatedDict</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inDict</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">output</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span>
+        <span class="k">for</span> <span class="n">dictKey</span> <span class="k">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">dictKey</span> <span class="o">==</span> <span class="n">key</span> <span class="p">{</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">dictKey</span><span class="p">]</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">childDict</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">dictKey</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="p">{</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">childDict</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">output</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>As you can see, when initialized with a string, this class converts the provided string into a <code class="language-plaintext highlighter-rouge">[String: Any]</code> dictionary and assigns it to <code class="language-plaintext highlighter-rouge">generatedDict</code>. A <code class="language-plaintext highlighter-rouge">lookup(key:)</code> function searches the value for this key in this <code class="language-plaintext highlighter-rouge">generatedDict</code> recursively. This is what it would look like in action:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">str</span> <span class="o">=</span> <span class="s">"""
+{
+    "</span><span class="n">id</span><span class="s">": 234896773,
+    "</span><span class="n">name</span><span class="s">": "</span><span class="kt">Beaver</span><span class="s">",
+    "</span><span class="n">owner</span><span class="s">": {
+      "</span><span class="n">login</span><span class="s">": "</span><span class="n">ravitripathi</span><span class="s">",
+      "</span><span class="n">id</span><span class="s">": 13906959,
+      "</span><span class="n">url</span><span class="s">": "</span><span class="nv">https</span><span class="p">:</span><span class="c1">//api.github.com/users/ravitripathi",</span>
+      <span class="s">"html_url"</span><span class="p">:</span> <span class="s">"https://github.com/ravitripathi"</span><span class="p">,</span>
+      <span class="s">"followers_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/followers"</span><span class="p">,</span>
+      <span class="s">"starred_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/starred{/owner}{/repo}"</span><span class="p">,</span>
+      <span class="s">"repos_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/repos"</span><span class="p">,</span>
+      <span class="s">"events_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/events{/privacy}"</span><span class="p">,</span>
+      <span class="s">"received_events_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/received_events"</span><span class="p">,</span>
+      <span class="s">"type"</span><span class="p">:</span> <span class="s">"User"</span><span class="p">,</span>
+      <span class="s">"site_admin"</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s">"""
+
+
+if let jsonUtil = try? JsonUtility(withString: str) {
+    let htmlUrlString = jsonUtil.lookup(key: "</span><span class="n">html_url</span><span class="s">") //  "</span><span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/ravitripathi"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>But what if we could remove the <code class="language-plaintext highlighter-rouge">.lookup</code> call to obtain the urlString? <code class="language-plaintext highlighter-rouge">callAsFunction</code> allows you to use the <code class="language-plaintext highlighter-rouge">jsonUtil</code> instance as a function call, allowing you to make your call syntax more concise.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">JsonUtility</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">generatedDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+    <span class="nf">init</span><span class="p">(</span><span class="n">withString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inDict</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findValueForKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">generatedDict</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//Usage</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">jsonUtil</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">JsonUtility</span><span class="p">(</span><span class="nv">withString</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">htmlUrlString</span> <span class="o">=</span> <span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findValueForKey</span><span class="p">:</span> <span class="s">"html_url"</span><span class="p">)</span> <span class="c1">//  "https://github.com/ravitripathi"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Just like with normal functions, it is also possible to overload a <code class="language-plaintext highlighter-rouge">callAsFunction</code> method:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findValueForKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="o">..</span> <span class="p">}</span>
+<span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findKeyForValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="o">..</span> <span class="p">}</span>
+
+<span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findValueForKey</span><span class="p">:</span> <span class="s">"html_url"</span><span class="p">)</span> <span class="c1">//  "https://github.com/ravitripathi"</span>
+<span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findKeyForValue</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/repos"</span><span class="p">)</span> <span class="c1">// "repo_url"</span>
+</code></pre></div></div>
+<hr />
+
+<h3 id="where-should-i-use-this">Where should I use this?</h3>
+
+<p>Often, you might have many nominal types, that have a “primary method” that performs their main use. For example, a calculator class which mostly calls a specific function.</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculator</span><span class="o">.</span><span class="nf">calculating</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Since a primary function like this one would be called frequently, <code class="language-plaintext highlighter-rouge">callAsFunction</code> simplifies the expression used for it.</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ravitripathi.github.io/2020/12/13/callAsFunction.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2020/12/13/callAsFunction.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-105624121-2');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

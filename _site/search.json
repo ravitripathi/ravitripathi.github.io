@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "Moving a Command Line Tool project to Swift Packages",
+      "category" : "",
+      "tags"     : "swift, SPM, Command Line Tools",
+      "url"      : "/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html",
+      "date"     : "2022-03-12 18:30:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Haptic Feedback on iOS",
+      "category" : "",
+      "tags"     : "swift, haptics, iOS",
+      "url"      : "/2021/03/15/Haptic-Feedback-on-iOS.html",
+      "date"     : "2021-03-15 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "TILSwift - callAsFunction",
+      "category" : "",
+      "tags"     : "til-swift",
+      "url"      : "/2020/12/13/callAsFunction.html",
+      "date"     : "2020-12-13 20:32:00 +0530"
+    } ,
+  
+    {
       "title"    : "Using Environment Object for Reactive Views",
       "category" : "",
       "tags"     : "swiftui, combine",
