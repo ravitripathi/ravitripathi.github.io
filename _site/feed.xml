@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://ravitripathi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravitripathi.github.io/" rel="alternate" type="text/html" /><updated>2023-07-09T18:50:00+05:30</updated><id>https://ravitripathi.github.io/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi&apos;s Blog</subtitle><entry><title type="html">Modifying Runpath for a compiled swift macOS binary</title><link href="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html" rel="alternate" type="text/html" title="Modifying Runpath for a compiled swift macOS binary" /><published>2023-01-14T19:30:00+05:30</published><updated>2023-01-14T19:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary</id><content type="html" xml:base="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html">&lt;p&gt;While working on moving an &lt;a href=&quot;/2022-03-12-Moving-a-Command-Line-Tool-project-to-Swift-Packages.md&quot;&gt;internal command line tool to a pure SPM project&lt;/a&gt;, I encountered an interesting problem.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://ravitripathi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravitripathi.github.io/" rel="alternate" type="text/html" /><updated>2023-07-23T22:08:22+05:30</updated><id>https://ravitripathi.github.io/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi&apos;s Blog</subtitle><entry><title type="html">Analyzing .ipa files - Instagram’s Threads app</title><link href="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html" rel="alternate" type="text/html" title="Analyzing .ipa files - Instagram’s Threads app" /><published>2023-07-23T18:30:00+05:30</published><updated>2023-07-23T18:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App</id><content type="html" xml:base="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html">&lt;p&gt;Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; files present in the app bundle. &lt;a href=&quot;https://twitter.com/RhoTau/status/1647209380826451968?s=20&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/TweetScreenshot.png&quot; alt=&quot;Tweet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Due to the nature of how apps are delivered on the App Store, and how in a vast majority of workflows, developers never need to interact with the generated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; files for their projects, the structure of the compiled app is not very well-known nowadays. So, I decided to try out exploring and documenting the structure of the newest popular app - Instagram’s Threads App.&lt;/p&gt;
+
+&lt;h2 id=&quot;acquiring-threads-ipa&quot;&gt;Acquiring Threads’ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is a surprisingly convoluted process. Unlike Android’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.apk&lt;/code&gt; files, the distribution of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipa&lt;/code&gt; files is not exceedingly common, as unsigned &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; files can not be installed on devices, and you can not simply copy over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipa&lt;/code&gt; from a physical device. Local backups for iOS devices made by macOS do contain the installed applications. However, the backups are encrypted.&lt;/p&gt;
+
+&lt;p&gt;Luckily, Apple provides APIs for interacting with the App Store. &lt;a href=&quot;https://github.com/majd&quot;&gt;Majd Alfhaily’s&lt;/a&gt; &lt;a href=&quot;https://github.com/majd/ipatool&quot;&gt;ipatool&lt;/a&gt; allows users to search and download ipa files from App Store, after authenticating with their Apple ID.&lt;/p&gt;
+
+&lt;p&gt;After authenticating with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipatool auth login --email &amp;lt;APP_STORE_EMAIL&amp;gt;&lt;/code&gt;, I searched for the Threads app, in order to obtain its bundle ID:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/threadsoutput.png&quot; alt=&quot;ipatool search output&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bingo! So Threads’ bundle ID is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.burbn.barcelona&lt;/code&gt;. Bundle IDs are usually reversed domain names, followed by the name of the application. Instagram was &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2014/07/instagram-used-to-be-called-brbn/373815/&quot;&gt;originally called “Burbn”&lt;/a&gt;, which explains the domain name. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;barcelona&lt;/code&gt; could probably be the internal code name for the Threads App.&lt;/p&gt;
+
+&lt;p&gt;Now, once the bundle ID is known, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; can be downloaded using ipatool:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/ipatooldownload.png&quot; alt=&quot;ipatool download output&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;extracting-the-application-from-the-package&quot;&gt;Extracting the Application from the package&lt;/h2&gt;
+
+&lt;p&gt;This is quite straightforward. Just change the extension of the downloaded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zip&lt;/code&gt;, and extract it. The application shows up under the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Payload&lt;/code&gt; folder in the extracted directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;inspecting-contents-of-the-application&quot;&gt;Inspecting contents of the application&lt;/h2&gt;
+
+&lt;p&gt;Right-click on the application “Barcelona”, and select “Show Package Contents”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/applicationcontent.png&quot; alt=&quot;Application Content&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We finally arrived at the contents of the application. Lot of interesting items lying around.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/appcontents.png&quot; alt=&quot;Package Contents&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;assets&quot;&gt;Assets&lt;/h3&gt;
+
+&lt;p&gt;Loads of assets. First up, we see the compiled contents of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcassets&lt;/code&gt;, which show up under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Assets.car&lt;/code&gt;. While there is no direct way of accessing the contents inside this file, &lt;a href=&quot;https://github.com/SerenaKit/Samra&quot;&gt;Samra&lt;/a&gt;, an open-source macOS app, makes it a breeze to inspect the contents of Asset Catalogues.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/assetcontents.png&quot; alt=&quot;Asset Contents&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It contains the usual suspects (icons used across the app), along with some icons indicating payment-related features.&lt;/p&gt;
+
+&lt;p&gt;A lot of font files as well. The Cosmopolitan Script looks pretty interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/postAssets/threadfonts.png&quot; alt=&quot;Fonts&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;libraries-and-frameworks&quot;&gt;Libraries and Frameworks&lt;/h3&gt;
+
+&lt;p&gt;This did not yield a lot of interesting results. The app uses &lt;em&gt;no dynamic frameworks&lt;/em&gt;, so the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Frameworks&lt;/code&gt; folder contains nothing of significance. This implies that the preferred choice of linking 3rd party libraries in the app is static linking, a trend which is becoming increasingly common, due to the benefits of shorter app launch times. We can expect static libraries in production builds to become more prevalent with the &lt;a href=&quot;https://medium.com/@SanjuNaik14/meet-mergeable-libraries-790a40aa89b8&quot;&gt;upcoming mergeable libraries feature in Xcode 15&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-interesting-tidbits&quot;&gt;Other interesting tidbits&lt;/h3&gt;
+
+&lt;p&gt;Localizations. Loads of them. 36 lproj files&lt;/p&gt;
+
+&lt;p&gt;There are signs of a lot of &lt;em&gt;native&lt;/em&gt; iOS APIs, which is surprising for Meta. Some of them include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;presence-of-metal-shaders&quot;&gt;Presence of Metal Shaders&lt;/h4&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/postAssets/metalshaders.png&quot; alt=&quot;Metal Shaders&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a bunch of OpenGL shaders as well.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;coreml-models-the-names-of-some-of-these-models-might-be-indicative-of-what-they-do-notice-the-one-for-reels-tab&quot;&gt;CoreML models. The names of some of these models might be indicative of what they do. (Notice the one for Reels Tab)&lt;/h4&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/postAssets/coremlmodels.png&quot; alt=&quot;CoreML&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Quite interesting to see Threads leveraging &lt;em&gt;native on-device ML APIs&lt;/em&gt; for optimizing their feeds.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;infoplist-file&quot;&gt;Info.plist file&lt;/h4&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; file is an important entity in an application, serving multiple purposes. For instance, permission prompt messages reside here. The CI/CD setup in Meta might also require certain pieces of information to be passed onto the plist file. A key &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FBBuildBranchName&lt;/code&gt; exists, with the value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fbobjc/releases/release-igios-2023.07.17&lt;/code&gt;. 
+&lt;img src=&quot;/assets/postAssets/plistfile.png&quot; alt=&quot;Plist&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DTXcode&lt;/code&gt; value points to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1431&lt;/code&gt;, which implies the Xcode version used for building this application was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;14.3.1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The structure of compiled applications makes it easy to unzip and pry them open. Assets are quite easy to extract as well. Plist files are simply copied over to the bundle, so it is &lt;strong&gt;never&lt;/strong&gt; a good idea to store sensitive information, like API keys in it.&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="IPA" /><category term="frameworks" /><summary type="html">Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link</summary></entry><entry><title type="html">Modifying Runpath for a compiled swift macOS binary</title><link href="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html" rel="alternate" type="text/html" title="Modifying Runpath for a compiled swift macOS binary" /><published>2023-01-14T19:30:00+05:30</published><updated>2023-01-14T19:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary</id><content type="html" xml:base="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html">&lt;p&gt;While working on moving an &lt;a href=&quot;/2022-03-12-Moving-a-Command-Line-Tool-project-to-Swift-Packages.md&quot;&gt;internal command line tool to a pure SPM project&lt;/a&gt;, I encountered an interesting problem.&lt;/p&gt;
 
 &lt;p&gt;We use &lt;a href=&quot;https://github.com/apple/swift-syntax&quot;&gt;SwiftSyntax&lt;/a&gt; in our CLI tool. Adding the package as a dependency is quite straightforward. SPM also resolves SwiftSyntax’s dependencies as well for us, one of which is a dynamic library, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser.dylib&lt;/code&gt;.&lt;/p&gt;
 

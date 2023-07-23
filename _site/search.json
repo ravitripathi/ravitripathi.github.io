@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Analyzing .ipa files - Instagram&#39;s Threads app",
+      "category" : "",
+      "tags"     : "iOS, IPA, frameworks",
+      "url"      : "/2023/07/23/Analyzing-ipa-Files-Threads-App.html",
+      "date"     : "2023-07-23 18:30:00 +0530"
+    } ,
+  
+    {
       "title"    : "Modifying Runpath for a compiled swift macOS binary",
       "category" : "",
       "tags"     : "swift, SPM, Command Line Tools",

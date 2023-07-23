@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Analyzing .ipa files - Instagram's Threads app</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Analyzing .ipa files - Instagram’s Threads app | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Analyzing .ipa files - Instagram’s Threads app" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link" />
+<meta property="og:description" content="Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link" />
+<link rel="canonical" href="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-07-23T18:30:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analyzing .ipa files - Instagram’s Threads app" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-23T18:30:00+05:30","datePublished":"2023-07-23T18:30:00+05:30","description":"Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link","headline":"Analyzing .ipa files - Instagram’s Threads app","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html"},"url":"https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2023/07/23/Analyzing-ipa-Files-Threads-App.html">
+    <h2 class="post-title">Analyzing .ipa files - Instagram&#39;s Threads app</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Jul 23, 2023</div></div>
+  <div class="post">
+    <p>Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via <code class="language-plaintext highlighter-rouge">Info.plist</code> files present in the app bundle. <a href="https://twitter.com/RhoTau/status/1647209380826451968?s=20">Link</a></p>
+
+<p><img src="/assets/postAssets/TweetScreenshot.png" alt="Tweet" /></p>
+
+<p>Due to the nature of how apps are delivered on the App Store, and how in a vast majority of workflows, developers never need to interact with the generated <code class="language-plaintext highlighter-rouge">.ipa</code> files for their projects, the structure of the compiled app is not very well-known nowadays. So, I decided to try out exploring and documenting the structure of the newest popular app - Instagram’s Threads App.</p>
+
+<h2 id="acquiring-threads-ipa">Acquiring Threads’ <code class="language-plaintext highlighter-rouge">.ipa</code></h2>
+
+<p>This is a surprisingly convoluted process. Unlike Android’s <code class="language-plaintext highlighter-rouge">.apk</code> files, the distribution of <code class="language-plaintext highlighter-rouge">ipa</code> files is not exceedingly common, as unsigned <code class="language-plaintext highlighter-rouge">.ipa</code> files can not be installed on devices, and you can not simply copy over <code class="language-plaintext highlighter-rouge">ipa</code> from a physical device. Local backups for iOS devices made by macOS do contain the installed applications. However, the backups are encrypted.</p>
+
+<p>Luckily, Apple provides APIs for interacting with the App Store. <a href="https://github.com/majd">Majd Alfhaily’s</a> <a href="https://github.com/majd/ipatool">ipatool</a> allows users to search and download ipa files from App Store, after authenticating with their Apple ID.</p>
+
+<p>After authenticating with <code class="language-plaintext highlighter-rouge">ipatool auth login --email &lt;APP_STORE_EMAIL&gt;</code>, I searched for the Threads app, in order to obtain its bundle ID:</p>
+
+<p><img src="/assets/postAssets/threadsoutput.png" alt="ipatool search output" /></p>
+
+<p>Bingo! So Threads’ bundle ID is <code class="language-plaintext highlighter-rouge">com.burbn.barcelona</code>. Bundle IDs are usually reversed domain names, followed by the name of the application. Instagram was <a href="https://www.theatlantic.com/technology/archive/2014/07/instagram-used-to-be-called-brbn/373815/">originally called “Burbn”</a>, which explains the domain name. <code class="language-plaintext highlighter-rouge">barcelona</code> could probably be the internal code name for the Threads App.</p>
+
+<p>Now, once the bundle ID is known, the <code class="language-plaintext highlighter-rouge">.ipa</code> can be downloaded using ipatool:</p>
+
+<p><img src="/assets/postAssets/ipatooldownload.png" alt="ipatool download output" /></p>
+
+<h2 id="extracting-the-application-from-the-package">Extracting the Application from the package</h2>
+
+<p>This is quite straightforward. Just change the extension of the downloaded <code class="language-plaintext highlighter-rouge">.ipa</code> to <code class="language-plaintext highlighter-rouge">.zip</code>, and extract it. The application shows up under the <code class="language-plaintext highlighter-rouge">Payload</code> folder in the extracted directory.</p>
+
+<h2 id="inspecting-contents-of-the-application">Inspecting contents of the application</h2>
+
+<p>Right-click on the application “Barcelona”, and select “Show Package Contents”</p>
+
+<p><img src="/assets/postAssets/applicationcontent.png" alt="Application Content" /></p>
+
+<p>We finally arrived at the contents of the application. Lot of interesting items lying around.</p>
+
+<p><img src="/assets/postAssets/appcontents.png" alt="Package Contents" /></p>
+
+<h3 id="assets">Assets</h3>
+
+<p>Loads of assets. First up, we see the compiled contents of <code class="language-plaintext highlighter-rouge">xcassets</code>, which show up under <code class="language-plaintext highlighter-rouge">Assets.car</code>. While there is no direct way of accessing the contents inside this file, <a href="https://github.com/SerenaKit/Samra">Samra</a>, an open-source macOS app, makes it a breeze to inspect the contents of Asset Catalogues.</p>
+
+<p><img src="/assets/postAssets/assetcontents.png" alt="Asset Contents" /></p>
+
+<p>It contains the usual suspects (icons used across the app), along with some icons indicating payment-related features.</p>
+
+<p>A lot of font files as well. The Cosmopolitan Script looks pretty interesting.</p>
+
+<p><img src="/assets/postAssets/threadfonts.png" alt="Fonts" /></p>
+
+<h3 id="libraries-and-frameworks">Libraries and Frameworks</h3>
+
+<p>This did not yield a lot of interesting results. The app uses <em>no dynamic frameworks</em>, so the <code class="language-plaintext highlighter-rouge">Frameworks</code> folder contains nothing of significance. This implies that the preferred choice of linking 3rd party libraries in the app is static linking, a trend which is becoming increasingly common, due to the benefits of shorter app launch times. We can expect static libraries in production builds to become more prevalent with the <a href="https://medium.com/@SanjuNaik14/meet-mergeable-libraries-790a40aa89b8">upcoming mergeable libraries feature in Xcode 15</a>.</p>
+
+<h3 id="other-interesting-tidbits">Other interesting tidbits</h3>
+
+<p>Localizations. Loads of them. 36 lproj files</p>
+
+<p>There are signs of a lot of <em>native</em> iOS APIs, which is surprising for Meta. Some of them include:</p>
+
+<ul>
+  <li>
+    <h4 id="presence-of-metal-shaders">Presence of Metal Shaders</h4>
+    <p><img src="/assets/postAssets/metalshaders.png" alt="Metal Shaders" /></p>
+  </li>
+</ul>
+
+<p>There are a bunch of OpenGL shaders as well.</p>
+
+<ul>
+  <li>
+    <h4 id="coreml-models-the-names-of-some-of-these-models-might-be-indicative-of-what-they-do-notice-the-one-for-reels-tab">CoreML models. The names of some of these models might be indicative of what they do. (Notice the one for Reels Tab)</h4>
+    <p><img src="/assets/postAssets/coremlmodels.png" alt="CoreML" /></p>
+  </li>
+</ul>
+
+<p>Quite interesting to see Threads leveraging <em>native on-device ML APIs</em> for optimizing their feeds.</p>
+
+<ul>
+  <li>
+    <h4 id="infoplist-file">Info.plist file</h4>
+  </li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">Info.plist</code> file is an important entity in an application, serving multiple purposes. For instance, permission prompt messages reside here. The CI/CD setup in Meta might also require certain pieces of information to be passed onto the plist file. A key <code class="language-plaintext highlighter-rouge">FBBuildBranchName</code> exists, with the value <code class="language-plaintext highlighter-rouge">fbobjc/releases/release-igios-2023.07.17</code>. 
+<img src="/assets/postAssets/plistfile.png" alt="Plist" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">DTXcode</code> value points to <code class="language-plaintext highlighter-rouge">1431</code>, which implies the Xcode version used for building this application was <code class="language-plaintext highlighter-rouge">14.3.1</code>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The structure of compiled applications makes it easy to unzip and pry them open. Assets are quite easy to extract as well. Plist files are simply copied over to the bundle, so it is <strong>never</strong> a good idea to store sensitive information, like API keys in it.</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2023</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-105624121-2');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
