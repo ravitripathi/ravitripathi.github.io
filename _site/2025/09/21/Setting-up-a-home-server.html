@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Setting up a home server</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setting up a home server | Ravi Tripathi</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Setting up a home server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments." />
+<meta property="og:description" content="I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments." />
+<link rel="canonical" href="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html" />
+<meta property="og:url" content="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html" />
+<meta property="og:site_name" content="Ravi Tripathi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-21T22:51:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setting up a home server" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-21T22:51:00+05:30","datePublished":"2025-09-21T22:51:00+05:30","description":"I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.","headline":"Setting up a home server","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html"},"url":"https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Ravi Tripathi" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Ravi Tripathi</a>
+      </h2>
+      </div><p class="tagline">Mobile App Developer</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2025</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/2025/09/21/Setting-up-a-home-server.html">
+    <h2 class="post-title">Setting up a home server</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Sep 21, 2025</div></div>
+  <div class="post">
+    <p>I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.</p>
+
+<p>Finally, I came across this excellent video by <em>Kalos Likes Computers</em>, titled “
+<a href="https://www.youtube.com/watch?v=IuRWqzfX1ik">The $0 Home Server</a>”. Now this was exactly what I had been looking for. A guide for installing Jellyfin on an old laptop.</p>
+
+<p>I’ve taken cues from this video, and I’m mixing up a few things to my liking. First up, I’ve installed Lubuntu instead of Ubuntu Server as suggested in the video. Having a GUI would help if I need to debug something physically on the laptop if something went wrong, and I wasn’t able to SSH into it.</p>
+
+<p>I’m also installing Docker and NVIDIA drivers on it. Docker for managing my Jellyfin installation. And NVIDIA drivers for (hopefully) speeding up video transcoding on Jellyfin. Let’s see how this experiment goes.</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html';
+      this.page.identifier = 'https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ravitripathi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/ravitripathi" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/ravitripathi1996" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://twitter.com/rhotau" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2025</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105624121-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-105624121-2');
+  </script>
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
