@@ -1,645 +1,645 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://ravitripathi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravitripathi.github.io/" rel="alternate" type="text/html" /><updated>2026-10-06T14:23:52+05:30</updated><id>https://ravitripathi.github.io/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi&apos;s Blog</subtitle><entry><title type="html">Setting up a home server</title><link href="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html" rel="alternate" type="text/html" title="Setting up a home server" /><published>2025-09-21T22:51:00+05:30</published><updated>2025-09-21T22:51:00+05:30</updated><id>https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server</id><content type="html" xml:base="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html">&lt;p&gt;I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://ravitripathi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravitripathi.github.io/" rel="alternate" type="text/html" /><updated>2026-10-06T14:48:45+05:30</updated><id>https://ravitripathi.github.io/feed.xml</id><title type="html">Ravi Tripathi</title><subtitle>Ravi Tripathi&apos;s Blog</subtitle><entry><title type="html">Setting up a home server</title><link href="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html" rel="alternate" type="text/html" title="Setting up a home server" /><published>2025-09-21T22:51:00+05:30</published><updated>2025-09-21T22:51:00+05:30</updated><id>https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server</id><content type="html" xml:base="https://ravitripathi.github.io/2025/09/21/Setting-up-a-home-server.html"><![CDATA[<p>I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.</p>
 
-&lt;p&gt;Finally, I came across this excellent video by &lt;em&gt;Kalos Likes Computers&lt;/em&gt;, titled “
-&lt;a href=&quot;https://www.youtube.com/watch?v=IuRWqzfX1ik&quot;&gt;The $0 Home Server&lt;/a&gt;”. Now this was exactly what I had been looking for. A guide for installing Jellyfin on an old laptop.&lt;/p&gt;
+<p>Finally, I came across this excellent video by <em>Kalos Likes Computers</em>, titled “
+<a href="https://www.youtube.com/watch?v=IuRWqzfX1ik">The $0 Home Server</a>”. Now this was exactly what I had been looking for. A guide for installing Jellyfin on an old laptop.</p>
 
-&lt;p&gt;I’ve taken cues from this video, and I’m mixing up a few things to my liking. First up, I’ve installed Lubuntu instead of Ubuntu Server as suggested in the video. Having a GUI would help if I need to debug something physically on the laptop if something went wrong, and I wasn’t able to SSH into it.&lt;/p&gt;
+<p>I’ve taken cues from this video, and I’m mixing up a few things to my liking. First up, I’ve installed Lubuntu instead of Ubuntu Server as suggested in the video. Having a GUI would help if I need to debug something physically on the laptop if something went wrong, and I wasn’t able to SSH into it.</p>
 
-&lt;p&gt;I’m also installing Docker and NVIDIA drivers on it. Docker for managing my Jellyfin installation. And NVIDIA drivers for (hopefully) speeding up video transcoding on Jellyfin. Let’s see how this experiment goes.&lt;/p&gt;</content><author><name></name></author><category term="server" /><category term="ubuntu" /><category term="jellyfin" /><summary type="html">I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.</summary></entry><entry><title type="html">Analyzing .ipa files - Instagram’s Threads app</title><link href="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html" rel="alternate" type="text/html" title="Analyzing .ipa files - Instagram’s Threads app" /><published>2023-07-23T18:30:00+05:30</published><updated>2023-07-23T18:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App</id><content type="html" xml:base="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html">&lt;p&gt;Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; files present in the app bundle. &lt;a href=&quot;https://twitter.com/RhoTau/status/1647209380826451968?s=20&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+<p>I’m also installing Docker and NVIDIA drivers on it. Docker for managing my Jellyfin installation. And NVIDIA drivers for (hopefully) speeding up video transcoding on Jellyfin. Let’s see how this experiment goes.</p>]]></content><author><name></name></author><category term="server" /><category term="ubuntu" /><category term="jellyfin" /><summary type="html"><![CDATA[I’ve been wanting to setup my home server for quite some time now. Mainly to host my pictures and some media content locally. Watched a couple of tutorials for a few months, but rather obtuse. Work obligations have also made it hard to find time for such fun experiments.]]></summary></entry><entry><title type="html">Analyzing .ipa files - Instagram’s Threads app</title><link href="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html" rel="alternate" type="text/html" title="Analyzing .ipa files - Instagram’s Threads app" /><published>2023-07-23T18:30:00+05:30</published><updated>2023-07-23T18:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App</id><content type="html" xml:base="https://ravitripathi.github.io/2023/07/23/Analyzing-ipa-Files-Threads-App.html"><![CDATA[<p>Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via <code class="language-plaintext highlighter-rouge">Info.plist</code> files present in the app bundle. <a href="https://twitter.com/RhoTau/status/1647209380826451968?s=20">Link</a></p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/TweetScreenshot.png&quot; alt=&quot;Tweet&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/TweetScreenshot.png" alt="Tweet" /></p>
 
-&lt;p&gt;Due to the nature of how apps are delivered on the App Store, and how in a vast majority of workflows, developers never need to interact with the generated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; files for their projects, the structure of the compiled app is not very well-known nowadays. So, I decided to try out exploring and documenting the structure of the newest popular app - Instagram’s Threads App.&lt;/p&gt;
+<p>Due to the nature of how apps are delivered on the App Store, and how in a vast majority of workflows, developers never need to interact with the generated <code class="language-plaintext highlighter-rouge">.ipa</code> files for their projects, the structure of the compiled app is not very well-known nowadays. So, I decided to try out exploring and documenting the structure of the newest popular app - Instagram’s Threads App.</p>
 
-&lt;h2 id=&quot;acquiring-threads-ipa&quot;&gt;Acquiring Threads’ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt;&lt;/h2&gt;
+<h2 id="acquiring-threads-ipa">Acquiring Threads’ <code class="language-plaintext highlighter-rouge">.ipa</code></h2>
 
-&lt;p&gt;This is a surprisingly convoluted process. Unlike Android’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.apk&lt;/code&gt; files, the distribution of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipa&lt;/code&gt; files is not exceedingly common, as unsigned &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; files can not be installed on devices, and you can not simply copy over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipa&lt;/code&gt; from a physical device. Local backups for iOS devices made by macOS do contain the installed applications. However, the backups are encrypted.&lt;/p&gt;
+<p>This is a surprisingly convoluted process. Unlike Android’s <code class="language-plaintext highlighter-rouge">.apk</code> files, the distribution of <code class="language-plaintext highlighter-rouge">ipa</code> files is not exceedingly common, as unsigned <code class="language-plaintext highlighter-rouge">.ipa</code> files can not be installed on devices, and you can not simply copy over <code class="language-plaintext highlighter-rouge">ipa</code> from a physical device. Local backups for iOS devices made by macOS do contain the installed applications. However, the backups are encrypted.</p>
 
-&lt;p&gt;Luckily, Apple provides APIs for interacting with the App Store. &lt;a href=&quot;https://github.com/majd&quot;&gt;Majd Alfhaily’s&lt;/a&gt; &lt;a href=&quot;https://github.com/majd/ipatool&quot;&gt;ipatool&lt;/a&gt; allows users to search and download ipa files from App Store, after authenticating with their Apple ID.&lt;/p&gt;
+<p>Luckily, Apple provides APIs for interacting with the App Store. <a href="https://github.com/majd">Majd Alfhaily’s</a> <a href="https://github.com/majd/ipatool">ipatool</a> allows users to search and download ipa files from App Store, after authenticating with their Apple ID.</p>
 
-&lt;p&gt;After authenticating with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipatool auth login --email &amp;lt;APP_STORE_EMAIL&amp;gt;&lt;/code&gt;, I searched for the Threads app, in order to obtain its bundle ID:&lt;/p&gt;
+<p>After authenticating with <code class="language-plaintext highlighter-rouge">ipatool auth login --email &lt;APP_STORE_EMAIL&gt;</code>, I searched for the Threads app, in order to obtain its bundle ID:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/threadsoutput.png&quot; alt=&quot;ipatool search output&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/threadsoutput.png" alt="ipatool search output" /></p>
 
-&lt;p&gt;Bingo! So Threads’ bundle ID is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.burbn.barcelona&lt;/code&gt;. Bundle IDs are usually reversed domain names, followed by the name of the application. Instagram was &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2014/07/instagram-used-to-be-called-brbn/373815/&quot;&gt;originally called “Burbn”&lt;/a&gt;, which explains the domain name. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;barcelona&lt;/code&gt; could probably be the internal code name for the Threads App.&lt;/p&gt;
+<p>Bingo! So Threads’ bundle ID is <code class="language-plaintext highlighter-rouge">com.burbn.barcelona</code>. Bundle IDs are usually reversed domain names, followed by the name of the application. Instagram was <a href="https://www.theatlantic.com/technology/archive/2014/07/instagram-used-to-be-called-brbn/373815/">originally called “Burbn”</a>, which explains the domain name. <code class="language-plaintext highlighter-rouge">barcelona</code> could probably be the internal code name for the Threads App.</p>
 
-&lt;p&gt;Now, once the bundle ID is known, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; can be downloaded using ipatool:&lt;/p&gt;
+<p>Now, once the bundle ID is known, the <code class="language-plaintext highlighter-rouge">.ipa</code> can be downloaded using ipatool:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/ipatooldownload.png&quot; alt=&quot;ipatool download output&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/ipatooldownload.png" alt="ipatool download output" /></p>
 
-&lt;h2 id=&quot;extracting-the-application-from-the-package&quot;&gt;Extracting the Application from the package&lt;/h2&gt;
+<h2 id="extracting-the-application-from-the-package">Extracting the Application from the package</h2>
 
-&lt;p&gt;This is quite straightforward. Just change the extension of the downloaded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zip&lt;/code&gt;, and extract it. The application shows up under the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Payload&lt;/code&gt; folder in the extracted directory.&lt;/p&gt;
+<p>This is quite straightforward. Just change the extension of the downloaded <code class="language-plaintext highlighter-rouge">.ipa</code> to <code class="language-plaintext highlighter-rouge">.zip</code>, and extract it. The application shows up under the <code class="language-plaintext highlighter-rouge">Payload</code> folder in the extracted directory.</p>
 
-&lt;h2 id=&quot;inspecting-contents-of-the-application&quot;&gt;Inspecting contents of the application&lt;/h2&gt;
+<h2 id="inspecting-contents-of-the-application">Inspecting contents of the application</h2>
 
-&lt;p&gt;Right-click on the application “Barcelona”, and select “Show Package Contents”&lt;/p&gt;
+<p>Right-click on the application “Barcelona”, and select “Show Package Contents”</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/applicationcontent.png&quot; alt=&quot;Application Content&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/applicationcontent.png" alt="Application Content" /></p>
 
-&lt;p&gt;We finally arrived at the contents of the application. Lot of interesting items lying around.&lt;/p&gt;
+<p>We finally arrived at the contents of the application. Lot of interesting items lying around.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/appcontents.png&quot; alt=&quot;Package Contents&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/appcontents.png" alt="Package Contents" /></p>
 
-&lt;h3 id=&quot;assets&quot;&gt;Assets&lt;/h3&gt;
+<h3 id="assets">Assets</h3>
 
-&lt;p&gt;Loads of assets. First up, we see the compiled contents of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcassets&lt;/code&gt;, which show up under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Assets.car&lt;/code&gt;. While there is no direct way of accessing the contents inside this file, &lt;a href=&quot;https://github.com/SerenaKit/Samra&quot;&gt;Samra&lt;/a&gt;, an open-source macOS app, makes it a breeze to inspect the contents of Asset Catalogues.&lt;/p&gt;
+<p>Loads of assets. First up, we see the compiled contents of <code class="language-plaintext highlighter-rouge">xcassets</code>, which show up under <code class="language-plaintext highlighter-rouge">Assets.car</code>. While there is no direct way of accessing the contents inside this file, <a href="https://github.com/SerenaKit/Samra">Samra</a>, an open-source macOS app, makes it a breeze to inspect the contents of Asset Catalogues.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/assetcontents.png&quot; alt=&quot;Asset Contents&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/assetcontents.png" alt="Asset Contents" /></p>
 
-&lt;p&gt;It contains the usual suspects (icons used across the app), along with some icons indicating payment-related features.&lt;/p&gt;
+<p>It contains the usual suspects (icons used across the app), along with some icons indicating payment-related features.</p>
 
-&lt;p&gt;A lot of font files as well. The Cosmopolitan Script looks pretty interesting.&lt;/p&gt;
+<p>A lot of font files as well. The Cosmopolitan Script looks pretty interesting.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/threadfonts.png&quot; alt=&quot;Fonts&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/threadfonts.png" alt="Fonts" /></p>
 
-&lt;h3 id=&quot;libraries-and-frameworks&quot;&gt;Libraries and Frameworks&lt;/h3&gt;
+<h3 id="libraries-and-frameworks">Libraries and Frameworks</h3>
 
-&lt;p&gt;This did not yield a lot of interesting results. The app uses &lt;em&gt;no dynamic frameworks&lt;/em&gt;, so the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Frameworks&lt;/code&gt; folder contains nothing of significance. This implies that the preferred choice of linking 3rd party libraries in the app is static linking, a trend which is becoming increasingly common, due to the benefits of shorter app launch times. We can expect static libraries in production builds to become more prevalent with the &lt;a href=&quot;https://medium.com/@SanjuNaik14/meet-mergeable-libraries-790a40aa89b8&quot;&gt;upcoming mergeable libraries feature in Xcode 15&lt;/a&gt;.&lt;/p&gt;
+<p>This did not yield a lot of interesting results. The app uses <em>no dynamic frameworks</em>, so the <code class="language-plaintext highlighter-rouge">Frameworks</code> folder contains nothing of significance. This implies that the preferred choice of linking 3rd party libraries in the app is static linking, a trend which is becoming increasingly common, due to the benefits of shorter app launch times. We can expect static libraries in production builds to become more prevalent with the <a href="https://medium.com/@SanjuNaik14/meet-mergeable-libraries-790a40aa89b8">upcoming mergeable libraries feature in Xcode 15</a>.</p>
 
-&lt;h3 id=&quot;other-interesting-tidbits&quot;&gt;Other interesting tidbits&lt;/h3&gt;
+<h3 id="other-interesting-tidbits">Other interesting tidbits</h3>
 
-&lt;p&gt;Localizations. Loads of them. 36 lproj files&lt;/p&gt;
+<p>Localizations. Loads of them. 36 lproj files</p>
 
-&lt;p&gt;There are signs of a lot of &lt;em&gt;native&lt;/em&gt; iOS APIs, which is surprising for Meta. Some of them include:&lt;/p&gt;
+<p>There are signs of a lot of <em>native</em> iOS APIs, which is surprising for Meta. Some of them include:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;presence-of-metal-shaders&quot;&gt;Presence of Metal Shaders&lt;/h4&gt;
-    &lt;p&gt;&lt;img src=&quot;/assets/postAssets/metalshaders.png&quot; alt=&quot;Metal Shaders&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <h4 id="presence-of-metal-shaders">Presence of Metal Shaders</h4>
+    <p><img src="/assets/postAssets/metalshaders.png" alt="Metal Shaders" /></p>
+  </li>
+</ul>
 
-&lt;p&gt;There are a bunch of OpenGL shaders as well.&lt;/p&gt;
+<p>There are a bunch of OpenGL shaders as well.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;coreml-models-the-names-of-some-of-these-models-might-be-indicative-of-what-they-do-notice-the-one-for-reels-tab&quot;&gt;CoreML models. The names of some of these models might be indicative of what they do. (Notice the one for Reels Tab)&lt;/h4&gt;
-    &lt;p&gt;&lt;img src=&quot;/assets/postAssets/coremlmodels.png&quot; alt=&quot;CoreML&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <h4 id="coreml-models-the-names-of-some-of-these-models-might-be-indicative-of-what-they-do-notice-the-one-for-reels-tab">CoreML models. The names of some of these models might be indicative of what they do. (Notice the one for Reels Tab)</h4>
+    <p><img src="/assets/postAssets/coremlmodels.png" alt="CoreML" /></p>
+  </li>
+</ul>
 
-&lt;p&gt;Quite interesting to see Threads leveraging &lt;em&gt;native on-device ML APIs&lt;/em&gt; for optimizing their feeds.&lt;/p&gt;
+<p>Quite interesting to see Threads leveraging <em>native on-device ML APIs</em> for optimizing their feeds.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;infoplist-file&quot;&gt;Info.plist file&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <h4 id="infoplist-file">Info.plist file</h4>
+  </li>
+</ul>
 
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; file is an important entity in an application, serving multiple purposes. For instance, permission prompt messages reside here. The CI/CD setup in Meta might also require certain pieces of information to be passed onto the plist file. A key &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FBBuildBranchName&lt;/code&gt; exists, with the value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fbobjc/releases/release-igios-2023.07.17&lt;/code&gt;. 
-&lt;img src=&quot;/assets/postAssets/plistfile.png&quot; alt=&quot;Plist&quot; /&gt;&lt;/p&gt;
+<p>The <code class="language-plaintext highlighter-rouge">Info.plist</code> file is an important entity in an application, serving multiple purposes. For instance, permission prompt messages reside here. The CI/CD setup in Meta might also require certain pieces of information to be passed onto the plist file. A key <code class="language-plaintext highlighter-rouge">FBBuildBranchName</code> exists, with the value <code class="language-plaintext highlighter-rouge">fbobjc/releases/release-igios-2023.07.17</code>. 
+<img src="/assets/postAssets/plistfile.png" alt="Plist" /></p>
 
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DTXcode&lt;/code&gt; value points to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1431&lt;/code&gt;, which implies the Xcode version used for building this application was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;14.3.1&lt;/code&gt;.&lt;/p&gt;
+<p>The <code class="language-plaintext highlighter-rouge">DTXcode</code> value points to <code class="language-plaintext highlighter-rouge">1431</code>, which implies the Xcode version used for building this application was <code class="language-plaintext highlighter-rouge">14.3.1</code>.</p>
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+<h2 id="conclusion">Conclusion</h2>
 
-&lt;p&gt;The structure of compiled applications makes it easy to unzip and pry them open. Assets are quite easy to extract as well. Plist files are simply copied over to the bundle, so it is &lt;strong&gt;never&lt;/strong&gt; a good idea to store sensitive information, like API keys in it.&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="IPA" /><category term="frameworks" /><summary type="html">Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link</summary></entry><entry><title type="html">Modifying Runpath for a compiled swift macOS binary</title><link href="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html" rel="alternate" type="text/html" title="Modifying Runpath for a compiled swift macOS binary" /><published>2023-01-14T19:30:00+05:30</published><updated>2023-01-14T19:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary</id><content type="html" xml:base="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html">&lt;p&gt;While working on moving an &lt;a href=&quot;/2022-03-12-Moving-a-Command-Line-Tool-project-to-Swift-Packages.md&quot;&gt;internal command line tool to a pure SPM project&lt;/a&gt;, I encountered an interesting problem.&lt;/p&gt;
+<p>The structure of compiled applications makes it easy to unzip and pry them open. Assets are quite easy to extract as well. Plist files are simply copied over to the bundle, so it is <strong>never</strong> a good idea to store sensitive information, like API keys in it.</p>]]></content><author><name></name></author><category term="iOS" /><category term="IPA" /><category term="frameworks" /><summary type="html"><![CDATA[Sometime back, there was a thread on Twitter about how some iOS apps ended up leaking API keys via Info.plist files present in the app bundle. Link]]></summary></entry><entry><title type="html">Modifying Runpath for a compiled swift macOS binary</title><link href="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html" rel="alternate" type="text/html" title="Modifying Runpath for a compiled swift macOS binary" /><published>2023-01-14T19:30:00+05:30</published><updated>2023-01-14T19:30:00+05:30</updated><id>https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary</id><content type="html" xml:base="https://ravitripathi.github.io/2023/01/14/Modifying-runpath-for-compiled-macOS-binary.html"><![CDATA[<p>While working on moving an <a href="/2022-03-12-Moving-a-Command-Line-Tool-project-to-Swift-Packages.md">internal command line tool to a pure SPM project</a>, I encountered an interesting problem.</p>
 
-&lt;p&gt;We use &lt;a href=&quot;https://github.com/apple/swift-syntax&quot;&gt;SwiftSyntax&lt;/a&gt; in our CLI tool. Adding the package as a dependency is quite straightforward. SPM also resolves SwiftSyntax’s dependencies as well for us, one of which is a dynamic library, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser.dylib&lt;/code&gt;.&lt;/p&gt;
+<p>We use <a href="https://github.com/apple/swift-syntax">SwiftSyntax</a> in our CLI tool. Adding the package as a dependency is quite straightforward. SPM also resolves SwiftSyntax’s dependencies as well for us, one of which is a dynamic library, <code class="language-plaintext highlighter-rouge">lib_InternalSwiftSyntaxParser.dylib</code>.</p>
 
-&lt;p&gt;The releases for SwiftSyntax are tied to releases of Swift Language itself, as it provides several tools for parsing and transforming Swift code. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser.dylib&lt;/code&gt; was bundled with Xcode itself, found under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/path_to_Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx&lt;/code&gt;. Just like with dynamic frameworks, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dylib&lt;/code&gt;s are not compiled into the final binary. Instead, they are added to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPATH&lt;/code&gt;, the runtime search path of your compiled executable. So when your executable runs, it looks for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dylib&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.framework&lt;/code&gt; in the specified search path, and then continues its execution.&lt;/p&gt;
+<p>The releases for SwiftSyntax are tied to releases of Swift Language itself, as it provides several tools for parsing and transforming Swift code. <code class="language-plaintext highlighter-rouge">lib_InternalSwiftSyntaxParser.dylib</code> was bundled with Xcode itself, found under <code class="language-plaintext highlighter-rouge">/path_to_Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx</code>. Just like with dynamic frameworks, <code class="language-plaintext highlighter-rouge">.dylib</code>s are not compiled into the final binary. Instead, they are added to the <code class="language-plaintext highlighter-rouge">RPATH</code>, the runtime search path of your compiled executable. So when your executable runs, it looks for the <code class="language-plaintext highlighter-rouge">.dylib</code>/<code class="language-plaintext highlighter-rouge">.framework</code> in the specified search path, and then continues its execution.</p>
 
-&lt;p&gt;Now if you are familiar with mac/iOS development, this isn’t a problem for a packaged &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ipa&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.app&lt;/code&gt; App. Because when you ship an app, any 3rd party dynamic framework is copied over to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Frameworks&lt;/code&gt; folder in the app, making it convenient to ship libraries de-coupled from the main app executable, but still accessible within the app’s bundle.&lt;/p&gt;
+<p>Now if you are familiar with mac/iOS development, this isn’t a problem for a packaged <code class="language-plaintext highlighter-rouge">.ipa</code>/<code class="language-plaintext highlighter-rouge">.app</code> App. Because when you ship an app, any 3rd party dynamic framework is copied over to the <code class="language-plaintext highlighter-rouge">Frameworks</code> folder in the app, making it convenient to ship libraries de-coupled from the main app executable, but still accessible within the app’s bundle.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/packagecontents.png&quot; alt=&quot;PackageContents&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/packagecontents.png" alt="PackageContents" /></p>
 
-&lt;p&gt;So why can’t we pull the same off with a CLI tool? What happens if you try to distribute it? Your users will be greeted with this message:&lt;/p&gt;
+<p>So why can’t we pull the same off with a CLI tool? What happens if you try to distribute it? Your users will be greeted with this message:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dyld: Library not loaded: @rpath/lib_InternalSwiftSyntaxParser.dylib
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dyld: Library not loaded: @rpath/lib_InternalSwiftSyntaxParser.dylib
+</code></pre></div></div>
 
-&lt;p&gt;Because the path against which your executable was linked against would simply not exist elsewhere. A CLI tool written in Swift is just a UNIX executable. There is no package which wraps it. While you can ship both the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;framework/dylib&lt;/code&gt; and the main executable together, and it would still work as long as they are in the same folder, it’s far from ideal. Futhermore, this makes it complicated to use a package manager like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt; to ship your CLI tool.&lt;/p&gt;
+<p>Because the path against which your executable was linked against would simply not exist elsewhere. A CLI tool written in Swift is just a UNIX executable. There is no package which wraps it. While you can ship both the <code class="language-plaintext highlighter-rouge">framework/dylib</code> and the main executable together, and it would still work as long as they are in the same folder, it’s far from ideal. Futhermore, this makes it complicated to use a package manager like <code class="language-plaintext highlighter-rouge">Homebrew</code> to ship your CLI tool.</p>
 
-&lt;p&gt;This would be an easy fix if we could get a static library version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser.dylib&lt;/code&gt;, since you could just embed it in your final binary. Sadly, it was not shipped separately. However, what I &lt;em&gt;did&lt;/em&gt; know for certain is that our tool would be run on machines which had Xcode installed. What if, I could extract the path to the dylib, and somehow add it to our CLI tool’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPATH&lt;/code&gt;, so that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dyld&lt;/code&gt; finds the library at runtime?&lt;/p&gt;
+<p>This would be an easy fix if we could get a static library version of <code class="language-plaintext highlighter-rouge">lib_InternalSwiftSyntaxParser.dylib</code>, since you could just embed it in your final binary. Sadly, it was not shipped separately. However, what I <em>did</em> know for certain is that our tool would be run on machines which had Xcode installed. What if, I could extract the path to the dylib, and somehow add it to our CLI tool’s <code class="language-plaintext highlighter-rouge">RPATH</code>, so that <code class="language-plaintext highlighter-rouge">dyld</code> finds the library at runtime?</p>
 
-&lt;p&gt;Locating the path to the Xcode installation is straightforward. Running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcode-select -p&lt;/code&gt; gives:&lt;/p&gt;
+<p>Locating the path to the Xcode installation is straightforward. Running <code class="language-plaintext highlighter-rouge">xcode-select -p</code> gives:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Xcode.app/Contents/Developer  &lt;span class=&quot;c&quot;&gt;#Or any other path where you have installed Xcode&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Applications/Xcode.app/Contents/Developer  <span class="c">#Or any other path where you have installed Xcode</span>
+</code></pre></div></div>
 
-&lt;p&gt;Alright, so assuming we ship a compiled binary, and can add a post-install instruction with it (eg, running a custom script), we can install our binary on any machine, and extract the installation path to Xcode. But how do I update the Runtime Search Path for our executable? Enter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install_name_tool&lt;/code&gt;:&lt;/p&gt;
+<p>Alright, so assuming we ship a compiled binary, and can add a post-install instruction with it (eg, running a custom script), we can install our binary on any machine, and extract the installation path to Xcode. But how do I update the Runtime Search Path for our executable? Enter <code class="language-plaintext highlighter-rouge">install_name_tool</code>:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/install_name_tool.png&quot; alt=&quot;install_name_tool man page&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/install_name_tool.png" alt="install_name_tool man page" /></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install_name_tool&lt;/code&gt; can modify the search paths in a MACH-O binary. So, running a post-install script like this one looks for the Xcode installation on the end-user’s machines, and adds its path to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPATH&lt;/code&gt; 🚀:&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">install_name_tool</code> can modify the search paths in a MACH-O binary. So, running a post-install script like this one looks for the Xcode installation on the end-user’s machines, and adds its path to <code class="language-plaintext highlighter-rouge">RPATH</code> 🚀:</p>
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;XCODEPATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;LIBSYNTAXPATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$XCODEPATH&lt;/span&gt;/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/ 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="nv">XCODEPATH</span><span class="o">=</span><span class="si">$(</span>xcode-select <span class="nt">-p</span><span class="si">)</span>
+<span class="nv">LIBSYNTAXPATH</span><span class="o">=</span><span class="nv">$XCODEPATH</span>/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/ 
 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$XCODEPATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Xcode not installed. Please install Xcode to continue.&quot;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# remove installed binary (sonar) as well&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; sonar 
-    &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$XCODEPATH</span><span class="s2">"</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Xcode not installed. Please install Xcode to continue."</span>
+    <span class="c"># remove installed binary (sonar) as well</span>
+    <span class="nb">rm</span> <span class="nt">-rf</span> sonar 
+    <span class="nb">exit</span> <span class="nt">-1</span>
 
-    &lt;span class=&quot;k&quot;&gt;else
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Setting Xcode Toolchain path for sonar&quot;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#### install_name_tool ######&lt;/span&gt;
-    install_name_tool &lt;span class=&quot;nt&quot;&gt;-add_rpath&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$LIBSYNTAXPATH&lt;/span&gt; sonar
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"Setting Xcode Toolchain path for sonar"</span>
+    <span class="c">#### install_name_tool ######</span>
+    install_name_tool <span class="nt">-add_rpath</span> <span class="nv">$LIBSYNTAXPATH</span> sonar
+<span class="k">fi</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;epilogue&quot;&gt;Epilogue&lt;/h3&gt;
+<h3 id="epilogue">Epilogue</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install_name_tool&lt;/code&gt; served me well. However, &lt;a href=&quot;https://github.com/apple/swift-syntax&quot;&gt;SwiftSyntax&lt;/a&gt; now provides a standalone &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.framework&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser&lt;/code&gt;, instead of relying on Xcode.&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">install_name_tool</code> served me well. However, <a href="https://github.com/apple/swift-syntax">SwiftSyntax</a> now provides a standalone <code class="language-plaintext highlighter-rouge">.framework</code> for <code class="language-plaintext highlighter-rouge">lib_InternalSwiftSyntaxParser</code>, instead of relying on Xcode.</p>
 
-&lt;p&gt;Also, &lt;a href=&quot;https://github.com/keith/StaticInternalSwiftSyntaxParser&quot;&gt;there is now a distribution of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib_InternalSwiftSyntaxParser.dylib&lt;/code&gt; built statically&lt;/a&gt;, which allowed embedding the entirety of this library within the executable. I ended up using it in favour of messing around with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPATH&lt;/code&gt; after installation.&lt;/p&gt;
+<p>Also, <a href="https://github.com/keith/StaticInternalSwiftSyntaxParser">there is now a distribution of <code class="language-plaintext highlighter-rouge">lib_InternalSwiftSyntaxParser.dylib</code> built statically</a>, which allowed embedding the entirety of this library within the executable. I ended up using it in favour of messing around with <code class="language-plaintext highlighter-rouge">RPATH</code> after installation.</p>
 
-&lt;p&gt;All that said, it was fun figuring out these details. If you want to read more about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RPATH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install_name_tool&lt;/code&gt;, I recommend checking out this &lt;a href=&quot;https://blog.krzyzanowskim.com/2018/12/05/rpath-what/&quot;&gt;excellent blog post by Marcin Krzyżanowski.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="swift" /><category term="SPM" /><category term="Command Line Tools" /><summary type="html">While working on moving an internal command line tool to a pure SPM project, I encountered an interesting problem.</summary></entry><entry><title type="html">Moving a Command Line Tool project to Swift Packages</title><link href="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html" rel="alternate" type="text/html" title="Moving a Command Line Tool project to Swift Packages" /><published>2022-03-12T18:30:00+05:30</published><updated>2022-03-12T18:30:00+05:30</updated><id>https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages</id><content type="html" xml:base="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/swiftpackage.jpeg&quot; alt=&quot;Swift Package&quot; /&gt;&lt;/p&gt;
+<p>All that said, it was fun figuring out these details. If you want to read more about <code class="language-plaintext highlighter-rouge">RPATH</code> and <code class="language-plaintext highlighter-rouge">install_name_tool</code>, I recommend checking out this <a href="https://blog.krzyzanowskim.com/2018/12/05/rpath-what/">excellent blog post by Marcin Krzyżanowski.</a></p>]]></content><author><name></name></author><category term="swift" /><category term="SPM" /><category term="Command Line Tools" /><summary type="html"><![CDATA[While working on moving an internal command line tool to a pure SPM project, I encountered an interesting problem.]]></summary></entry><entry><title type="html">Moving a Command Line Tool project to Swift Packages</title><link href="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html" rel="alternate" type="text/html" title="Moving a Command Line Tool project to Swift Packages" /><published>2022-03-12T18:30:00+05:30</published><updated>2022-03-12T18:30:00+05:30</updated><id>https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages</id><content type="html" xml:base="https://ravitripathi.github.io/2022/03/12/Moving-a-Command-Line-Tool-project-to-Swift-Packages.html"><![CDATA[<p><img src="/assets/postAssets/swiftpackage.jpeg" alt="Swift Package" /></p>
 
-&lt;p&gt;Creating an executable Swift Package is a great way to quickly build a command line tool for folks familiar with the language. &lt;a href=&quot;https://www.avanderlee.com&quot;&gt;Antoine van der Lee&lt;/a&gt; has written a &lt;a href=&quot;https://www.avanderlee.com/swift/command-line-tool-package-manager/&quot;&gt;great article&lt;/a&gt; on getting started with one.&lt;/p&gt;
+<p>Creating an executable Swift Package is a great way to quickly build a command line tool for folks familiar with the language. <a href="https://www.avanderlee.com">Antoine van der Lee</a> has written a <a href="https://www.avanderlee.com/swift/command-line-tool-package-manager/">great article</a> on getting started with one.</p>
 
-&lt;p&gt;I recently moved an internal &lt;a href=&quot;https://www.gojek.io/blog/using-custom-lint-rules-to-improve-our-dls-coverage&quot;&gt;command line tool&lt;/a&gt; which we use here at Gojek to a Swift Package from an Xcode Project. Moving away from an Xcode project presented some difficulties, requiring some workarounds which I would talk about in this post. But before jumping into that, let’s address a common query.&lt;/p&gt;
+<p>I recently moved an internal <a href="https://www.gojek.io/blog/using-custom-lint-rules-to-improve-our-dls-coverage">command line tool</a> which we use here at Gojek to a Swift Package from an Xcode Project. Moving away from an Xcode project presented some difficulties, requiring some workarounds which I would talk about in this post. But before jumping into that, let’s address a common query.</p>
 
-&lt;h3 id=&quot;but-why-not-stick-to-an-xcode-command-line-target&quot;&gt;But why not stick to an Xcode Command Line Target?&lt;/h3&gt;
+<h3 id="but-why-not-stick-to-an-xcode-command-line-target">But why not stick to an Xcode Command Line Target?</h3>
 
-&lt;p&gt;Using SPM for building a command line tool instead of an Xcode Command Line target has some benefits:&lt;/p&gt;
+<p>Using SPM for building a command line tool instead of an Xcode Command Line target has some benefits:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Since the Swift Toolchain is &lt;a href=&quot;https://www.swift.org/getting-started/&quot;&gt;available on Windows and Linux&lt;/a&gt;, you can compile your Swift Package on these platforms without any Xcode-specific tools. Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swift build&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swift test&lt;/code&gt; to build and test a swift package respectively.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding test cases for Command Line Tool target in Xcode &lt;a href=&quot;https://developer.apple.com/forums/thread/52211&quot;&gt;has some caveats&lt;/a&gt;, and often involves creating a separate dynamic framework for enclosing your core logic so that it can be unit tested independently. This is not a problem with Swift Packages, where a test target can be added for an executable.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <p>Since the Swift Toolchain is <a href="https://www.swift.org/getting-started/">available on Windows and Linux</a>, you can compile your Swift Package on these platforms without any Xcode-specific tools. Use <code class="language-plaintext highlighter-rouge">swift build</code> and <code class="language-plaintext highlighter-rouge">swift test</code> to build and test a swift package respectively.</p>
+  </li>
+  <li>
+    <p>Adding test cases for Command Line Tool target in Xcode <a href="https://developer.apple.com/forums/thread/52211">has some caveats</a>, and often involves creating a separate dynamic framework for enclosing your core logic so that it can be unit tested independently. This is not a problem with Swift Packages, where a test target can be added for an executable.</p>
+  </li>
+</ul>
 
-&lt;p&gt;A command line tool is usually a single compiled executable, and having an additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.framework&lt;/code&gt; carrying the core logic makes it difficult to distribute. It also makes further optimizations difficult.&lt;/p&gt;
+<p>A command line tool is usually a single compiled executable, and having an additional <code class="language-plaintext highlighter-rouge">.framework</code> carrying the core logic makes it difficult to distribute. It also makes further optimizations difficult.</p>
 
-&lt;p&gt;However, tools associated with Xcode are more mature when compared to SPM, which can make it difficult to migrate projects.&lt;/p&gt;
+<p>However, tools associated with Xcode are more mature when compared to SPM, which can make it difficult to migrate projects.</p>
 
-&lt;h3 id=&quot;moving-to-spm&quot;&gt;Moving to SPM&lt;/h3&gt;
+<h3 id="moving-to-spm">Moving to SPM</h3>
 
-&lt;p&gt;This was really straightforward. In a new directory, I ran:&lt;/p&gt;
+<p>This was really straightforward. In a new directory, I ran:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;swift package init --type executable &amp;lt;Your_Executable_Name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swift package init --type executable &lt;Your_Executable_Name&gt;
+</code></pre></div></div>
 
-&lt;p&gt;This generates the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sources&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tests&lt;/code&gt; directory, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README.md&lt;/code&gt; and a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package.swift&lt;/code&gt; file. All I had to do was move the project files into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sources&lt;/code&gt; and the tests into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tests&lt;/code&gt; directory respectively.&lt;/p&gt;
+<p>This generates the <code class="language-plaintext highlighter-rouge">Sources</code> and <code class="language-plaintext highlighter-rouge">Tests</code> directory, a <code class="language-plaintext highlighter-rouge">README.md</code> and a <code class="language-plaintext highlighter-rouge">Package.swift</code> file. All I had to do was move the project files into <code class="language-plaintext highlighter-rouge">Sources</code> and the tests into <code class="language-plaintext highlighter-rouge">Tests</code> directory respectively.</p>
 
-&lt;p&gt;Opening the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package.swift&lt;/code&gt; launches Xcode. After adding the dependencies in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package.swift&lt;/code&gt; file, I was good to go.&lt;/p&gt;
+<p>Opening the <code class="language-plaintext highlighter-rouge">Package.swift</code> launches Xcode. After adding the dependencies in the <code class="language-plaintext highlighter-rouge">Package.swift</code> file, I was good to go.</p>
 
-&lt;h3 id=&quot;coverage-reports-for-swift-packages&quot;&gt;Coverage Reports for Swift Packages&lt;/h3&gt;
+<h3 id="coverage-reports-for-swift-packages">Coverage Reports for Swift Packages</h3>
 
-&lt;p&gt;While Xcode displays code coverage percentage for both SPM-based and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.xcodeproj&lt;/code&gt; projects within the IDE, many teams rely on tools like &lt;a href=&quot;https://github.com/fastlane-community/xcov&quot;&gt;xcov&lt;/a&gt; to generate test coverage reports, and even fail CI/CD pipelines if the total coverage drops below a certain limit. This is where I hit my first wall.&lt;/p&gt;
+<p>While Xcode displays code coverage percentage for both SPM-based and <code class="language-plaintext highlighter-rouge">.xcodeproj</code> projects within the IDE, many teams rely on tools like <a href="https://github.com/fastlane-community/xcov">xcov</a> to generate test coverage reports, and even fail CI/CD pipelines if the total coverage drops below a certain limit. This is where I hit my first wall.</p>
 
-&lt;p&gt;Unlike Xcode Projects, no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.xccoverage&lt;/code&gt; files are generated while running tests for a Swift Package. Instead, SPM generates a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.json&lt;/code&gt; file containing the coverage data, which is not compatible with Xcov. I had no way to check the coverage percentage on a CI job.&lt;/p&gt;
+<p>Unlike Xcode Projects, no <code class="language-plaintext highlighter-rouge">.xccoverage</code> files are generated while running tests for a Swift Package. Instead, SPM generates a <code class="language-plaintext highlighter-rouge">.json</code> file containing the coverage data, which is not compatible with Xcov. I had no way to check the coverage percentage on a CI job.</p>
 
-&lt;p&gt;Thankfully, I stumbled upon &lt;a href=&quot;https://github.com/mattpolzin/swift-test-codecov&quot;&gt;swift-test-codecov&lt;/a&gt;, another command line swift package which can parse this json and generate a table containing coverage results. Coupling this with &lt;a href=&quot;https://github.com/yonaskolb/Mint&quot;&gt;Mint&lt;/a&gt; allowed me to parse the coverage report on CI:&lt;/p&gt;
+<p>Thankfully, I stumbled upon <a href="https://github.com/mattpolzin/swift-test-codecov">swift-test-codecov</a>, another command line swift package which can parse this json and generate a table containing coverage results. Coupling this with <a href="https://github.com/yonaskolb/Mint">Mint</a> allowed me to parse the coverage report on CI:</p>
 
-&lt;center&gt;
-&lt;iframe src=&quot;https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;amp;t=seti&amp;amp;wt=none&amp;amp;l=application%2Fx-sh&amp;amp;width=850&amp;amp;ds=true&amp;amp;dsyoff=20px&amp;amp;dsblur=68px&amp;amp;wc=true&amp;amp;wa=false&amp;amp;pv=56px&amp;amp;ph=56px&amp;amp;ln=false&amp;amp;fl=1&amp;amp;fm=Hack&amp;amp;fs=13px&amp;amp;lh=133%25&amp;amp;si=false&amp;amp;es=2x&amp;amp;wm=false&amp;amp;code=%253E%2520mint%2520run%2520swift-test-codecov%2520.%252F.build%252Fdebug%252Fcodecov%252FSonar.json%2520-p%2520table%2520--removetestfiles%250A%250A%25F0%259F%258C%25B1%2520Finding%2520latest%2520version%2520of%2520swift-test-codecov%250A%25F0%259F%258C%25B1%2520Running%2520swift-test-codecov%25200.10.2...%250A%250AOverall%2520Coverage%253A%252065.44%2525%250A%250AFile%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Coverage%250A------------------------------------%2520--------%250A%253CREDACTED_NAME%253E.swift%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252097.37%2525%250A.....&quot; style=&quot;width: 900px; height: 373px; border:0; transform: scale(1); overflow:hidden;&quot; sandbox=&quot;allow-scripts allow-same-origin&quot;&gt;
-&lt;/iframe&gt;
-&lt;/center&gt;
+<center>
+<iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;t=seti&amp;wt=none&amp;l=application%2Fx-sh&amp;width=850&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=false&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%253E%2520mint%2520run%2520swift-test-codecov%2520.%252F.build%252Fdebug%252Fcodecov%252FSonar.json%2520-p%2520table%2520--removetestfiles%250A%250A%25F0%259F%258C%25B1%2520Finding%2520latest%2520version%2520of%2520swift-test-codecov%250A%25F0%259F%258C%25B1%2520Running%2520swift-test-codecov%25200.10.2...%250A%250AOverall%2520Coverage%253A%252065.44%2525%250A%250AFile%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Coverage%250A------------------------------------%2520--------%250A%253CREDACTED_NAME%253E.swift%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252097.37%2525%250A....." style="width: 900px; height: 373px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</center>
 
-&lt;h3 id=&quot;exporting-the-final-executable&quot;&gt;Exporting the final executable&lt;/h3&gt;
+<h3 id="exporting-the-final-executable">Exporting the final executable</h3>
 
-&lt;p&gt;This was the easy part. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swift build --configuration release&lt;/code&gt; builds the project and generates the executable inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.build/release&lt;/code&gt; directory. And that’s it! Copy the executable to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; and you are good to go.&lt;/p&gt;
+<p>This was the easy part. <code class="language-plaintext highlighter-rouge">swift build --configuration release</code> builds the project and generates the executable inside the <code class="language-plaintext highlighter-rouge">.build/release</code> directory. And that’s it! Copy the executable to <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> and you are good to go.</p>
 
-&lt;p&gt;However, even on release configuration, the final executable size was well above 12 MB. Quite high for a command line utility. I began looking for ways to compress an executable&lt;/p&gt;
+<p>However, even on release configuration, the final executable size was well above 12 MB. Quite high for a command line utility. I began looking for ways to compress an executable</p>
 
-&lt;h3 id=&quot;upx-ftw-&quot;&gt;UPX FTW 🚀&lt;/h3&gt;
+<h3 id="upx-ftw-">UPX FTW 🚀</h3>
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/upx/upx&quot;&gt;upx&lt;/a&gt; is powerful tool which can compress executables on Windows, macOS and Linux. This was perfect for my use case. Running upx brought down the final executable size from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;13.7 MB&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2 MB&lt;/code&gt;, a 76% decrease!!&lt;/p&gt;
+<p><a href="https://github.com/upx/upx">upx</a> is powerful tool which can compress executables on Windows, macOS and Linux. This was perfect for my use case. Running upx brought down the final executable size from <code class="language-plaintext highlighter-rouge">13.7 MB</code> to <code class="language-plaintext highlighter-rouge">3.2 MB</code>, a 76% decrease!!</p>
 
-&lt;h3 id=&quot;ship-it-&quot;&gt;Ship it 📦&lt;/h3&gt;
+<h3 id="ship-it-">Ship it 📦</h3>
 
-&lt;p&gt;For installing locally, a shell script can encapsulate all the steps needed for building and moving the final executable to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;:&lt;/p&gt;
-&lt;center&gt;
-&lt;iframe src=&quot;https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;amp;t=cobalt&amp;amp;wt=none&amp;amp;l=application%2Fx-sh&amp;amp;width=858&amp;amp;ds=true&amp;amp;dsyoff=20px&amp;amp;dsblur=68px&amp;amp;wc=true&amp;amp;wa=false&amp;amp;pv=56px&amp;amp;ph=56px&amp;amp;ln=false&amp;amp;fl=1&amp;amp;fm=Hack&amp;amp;fs=13px&amp;amp;lh=133%25&amp;amp;si=false&amp;amp;es=2x&amp;amp;wm=false&amp;amp;code=%2523%21%252Fbin%252Fsh%250A%250Aswift%2520build%2520--configuration%2520release%250Aupx%2520.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%250Acp%2520%2522.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%2522%2520%252Fusr%252Flocal%252Fbin&quot; style=&quot;width: 560px; height: 271px; border:0; transform: scale(1); overflow:hidden;&quot; sandbox=&quot;allow-scripts allow-same-origin&quot;&gt;
-&lt;/iframe&gt;
-&lt;/center&gt;
+<p>For installing locally, a shell script can encapsulate all the steps needed for building and moving the final executable to <code class="language-plaintext highlighter-rouge">/usr/local/bin</code>:</p>
+<center>
+<iframe src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&amp;t=cobalt&amp;wt=none&amp;l=application%2Fx-sh&amp;width=858&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=false&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=%2523%21%252Fbin%252Fsh%250A%250Aswift%2520build%2520--configuration%2520release%250Aupx%2520.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%250Acp%2520%2522.build%252Frelease%252F%253CYOUR_EXECUTABLE%253E%2522%2520%252Fusr%252Flocal%252Fbin" style="width: 560px; height: 271px; border:0; transform: scale(1); overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+</center>
 
-&lt;p&gt;For distributing your shiny new executable, you can use tools like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;homebrew&lt;/code&gt; or just provide a download link on your website. If you have a single Package in your repo, you use &lt;a href=&quot;https://github.com/yonaskolb/Mint&quot;&gt;Mint&lt;/a&gt; to distribute your tool right away, without any modifications.&lt;/p&gt;
+<p>For distributing your shiny new executable, you can use tools like <code class="language-plaintext highlighter-rouge">homebrew</code> or just provide a download link on your website. If you have a single Package in your repo, you use <a href="https://github.com/yonaskolb/Mint">Mint</a> to distribute your tool right away, without any modifications.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;SPM now makes it easy to manage and write tests for a command line tool written in Swift. And with tools like &lt;a href=&quot;https://github.com/mattpolzin/swift-test-codecov&quot;&gt;swift-test-codecov&lt;/a&gt;, &lt;a href=&quot;https://github.com/upx/upx&quot;&gt;upx&lt;/a&gt; and &lt;a href=&quot;https://github.com/yonaskolb/Mint&quot;&gt;Mint&lt;/a&gt;, you can generate coverage reports for your project, optimize the size of your executable, and provide an easy way to distribute it.&lt;/p&gt;
+<p>SPM now makes it easy to manage and write tests for a command line tool written in Swift. And with tools like <a href="https://github.com/mattpolzin/swift-test-codecov">swift-test-codecov</a>, <a href="https://github.com/upx/upx">upx</a> and <a href="https://github.com/yonaskolb/Mint">Mint</a>, you can generate coverage reports for your project, optimize the size of your executable, and provide an easy way to distribute it.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;This post was later published on the &lt;a href=&quot;https://medium.com/gojekengineering/migrating-an-xcode-command-line-tool-project-to-spm-47c5df36c54a&quot;&gt;Gojek engineering blog&lt;/a&gt; as well&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="swift" /><category term="SPM" /><category term="Command Line Tools" /><summary type="html"></summary></entry><entry><title type="html">Haptic Feedback on iOS</title><link href="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html" rel="alternate" type="text/html" title="Haptic Feedback on iOS" /><published>2021-03-15T00:00:00+05:30</published><updated>2021-03-15T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS</id><content type="html" xml:base="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html">&lt;p&gt;Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the &lt;em&gt;“Taptic Engine”&lt;/em&gt;, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.&lt;/p&gt;
+<blockquote>
+  <p>This post was later published on the <a href="https://medium.com/gojekengineering/migrating-an-xcode-command-line-tool-project-to-spm-47c5df36c54a">Gojek engineering blog</a> as well</p>
+</blockquote>]]></content><author><name></name></author><category term="swift" /><category term="SPM" /><category term="Command Line Tools" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Haptic Feedback on iOS</title><link href="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html" rel="alternate" type="text/html" title="Haptic Feedback on iOS" /><published>2021-03-15T00:00:00+05:30</published><updated>2021-03-15T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS</id><content type="html" xml:base="https://ravitripathi.github.io/2021/03/15/Haptic-Feedback-on-iOS.html"><![CDATA[<p>Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the <em>“Taptic Engine”</em>, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.</p>
 
-&lt;h2 id=&quot;uifeedbackgenerator&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIFeedbackGenerator&lt;/code&gt;&lt;/h2&gt;
+<h2 id="uifeedbackgenerator"><code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code></h2>
 
-&lt;p&gt;Quoting &lt;a href=&quot;https://developer.apple.com/documentation/uikit/uifeedbackgenerator&quot;&gt;the docs&lt;/a&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIFeedbackGenerator&lt;/code&gt; is &lt;em&gt;the abstract superclass for all feedback generators.&lt;/em&gt; You can use one of the concrete subclasses of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIFeedbackGenerator&lt;/code&gt; to generate a vibration feedback:&lt;/p&gt;
+<p>Quoting <a href="https://developer.apple.com/documentation/uikit/uifeedbackgenerator">the docs</a>, <code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code> is <em>the abstract superclass for all feedback generators.</em> You can use one of the concrete subclasses of <code class="language-plaintext highlighter-rouge">UIFeedbackGenerator</code> to generate a vibration feedback:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UINotificationFeedbackGenerator&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIImpactFeedbackGenerator&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UISelectionFeedbackGenerator&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code></li>
+  <li><code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code></li>
+  <li><code class="language-plaintext highlighter-rouge">UISelectionFeedbackGenerator</code></li>
+</ul>
 
-&lt;h3 id=&quot;uinotificationfeedbackgenerator&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UINotificationFeedbackGenerator&lt;/code&gt;&lt;/h3&gt;
+<h3 id="uinotificationfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code></h3>
 
-&lt;p&gt;As the name suggests, this class is used to give user feedback when an notification is displayed. It provides vibration feedbacks for 3 scenarios, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.success&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.warning&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.error&lt;/code&gt;.&lt;/p&gt;
+<p>As the name suggests, this class is used to give user feedback when an notification is displayed. It provides vibration feedbacks for 3 scenarios, <code class="language-plaintext highlighter-rouge">.success</code>, <code class="language-plaintext highlighter-rouge">.warning</code> and <code class="language-plaintext highlighter-rouge">.error</code>.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/errorKeyFrame.gif&quot; alt=&quot;Error Animation&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/errorKeyFrame.gif" alt="Error Animation" /></p>
 
-&lt;p&gt;Animations like these are often used to draw a user’s attention to the screen in scenarios where a provided input may be incorrect. A vibration feedback similar to one provided when an incorrect password is entered on the lockscreen can be added by simply calling:&lt;/p&gt;
+<p>Animations like these are often used to draw a user’s attention to the screen in scenarios where a provided input may be incorrect. A vibration feedback similar to one provided when an incorrect password is entered on the lockscreen can be added by simply calling:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;generator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UINotificationFeedbackGenerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;notificationOccurred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">generator</span> <span class="o">=</span> <span class="kt">UINotificationFeedbackGenerator</span><span class="p">()</span>
+<span class="n">generator</span><span class="o">.</span><span class="nf">notificationOccurred</span><span class="p">(</span><span class="o">.</span><span class="n">error</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;uiimpactfeedbackgenerator&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIImpactFeedbackGenerator&lt;/code&gt;&lt;/h3&gt;
+<h3 id="uiimpactfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code></h3>
 
-&lt;p&gt;When building views which collide with each other or the screen bounds, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIImpactFeedbackGenerator&lt;/code&gt; allows you to add vibration feedback analogous to the perceived weight of the component.&lt;/p&gt;
+<p>When building views which collide with each other or the screen bounds, <code class="language-plaintext highlighter-rouge">UIImpactFeedbackGenerator</code> allows you to add vibration feedback analogous to the perceived weight of the component.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/bounceanimation.gif&quot; alt=&quot;Bounce Animation&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/bounceanimation.gif" alt="Bounce Animation" /></p>
 
-&lt;p&gt;A large view like this one can be timed to generate a strong vibration feedback every time it touches the screen’s bottom bound. Again, the call for generating an impact feedback is very straightforward:&lt;/p&gt;
+<p>A large view like this one can be timed to generate a strong vibration feedback every time it touches the screen’s bottom bound. Again, the call for generating an impact feedback is very straightforward:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;impactGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIImpactFeedbackGenerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heavy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;impactGenerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;impactOccurred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">impactGenerator</span> <span class="o">=</span> <span class="kt">UIImpactFeedbackGenerator</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">heavy</span><span class="p">)</span>
+<span class="n">impactGenerator</span><span class="o">.</span><span class="nf">impactOccurred</span><span class="p">()</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;uiselectionfeedbackgenerator&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UISelectionFeedbackGenerator&lt;/code&gt;&lt;/h3&gt;
+<h3 id="uiselectionfeedbackgenerator"><code class="language-plaintext highlighter-rouge">UISelectionFeedbackGenerator</code></h3>
 
-&lt;p&gt;Selection feedback is perhaps the most frequently encountered haptic feedback on iOS. Switching between menus and toggling views which indicate state are perfect places for generating a selection feedback.&lt;/p&gt;
+<p>Selection feedback is perhaps the most frequently encountered haptic feedback on iOS. Switching between menus and toggling views which indicate state are perfect places for generating a selection feedback.</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;selectionGenerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UISelectionFeedbackGenerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;selectionGenerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;selectionChanged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;
-    &lt;img src=&quot;/assets/postAssets/iospicker.gif&quot; alt=&quot;&quot; /&gt;
-    &lt;br /&gt;
-    &lt;em&gt;The iOS time picker provides a subtle feedback vibration on selection change&lt;/em&gt;
-&lt;/p&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">let</span> <span class="nv">selectionGenerator</span> <span class="o">=</span> <span class="kt">UISelectionFeedbackGenerator</span><span class="p">()</span>
+ <span class="n">selectionGenerator</span><span class="o">.</span><span class="nf">selectionChanged</span><span class="p">()</span>
+</code></pre></div></div>
+<p>
+    <img src="/assets/postAssets/iospicker.gif" alt="" />
+    <br />
+    <em>The iOS time picker provides a subtle feedback vibration on selection change</em>
+</p>
 
-&lt;h2 id=&quot;but-why-should-i-add-haptic-feedback-to-my-app&quot;&gt;But why should I add haptic feedback to my app?&lt;/h2&gt;
+<h2 id="but-why-should-i-add-haptic-feedback-to-my-app">But why should I add haptic feedback to my app?</h2>
 
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/&quot;&gt;Haptics&lt;/a&gt; enhance a user’s experience by providing tactile feedback. Also, in case of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UINotificationFeedbackGenerator&lt;/code&gt;, they direct a user’s attention to important events happening on screen discretely.&lt;/p&gt;
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">Haptics</a> enhance a user’s experience by providing tactile feedback. Also, in case of <code class="language-plaintext highlighter-rouge">UINotificationFeedbackGenerator</code>, they direct a user’s attention to important events happening on screen discretely.</p>
 
-&lt;p&gt;Also, haptic feedbacks make your app more accessible by helping people interact with it when they have difficulty in seeing the screen, which is also mentioned by Apple on their &lt;a href=&quot;https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/user-interaction/&quot;&gt;Human Interface Guidelines&lt;/a&gt;.&lt;/p&gt;
+<p>Also, haptic feedbacks make your app more accessible by helping people interact with it when they have difficulty in seeing the screen, which is also mentioned by Apple on their <a href="https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/user-interaction/">Human Interface Guidelines</a>.</p>
 
-&lt;p&gt;A more detailed discussion, complete with sound recordings depicting various feedback types, &lt;a href=&quot;https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/&quot;&gt;can be found here&lt;/a&gt;.&lt;/p&gt;
+<p>A more detailed discussion, complete with sound recordings depicting various feedback types, <a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">can be found here</a>.</p>
 
-&lt;p&gt;Haptics are an underused gem which can enrich user experience and improve accessibility while adding a very low performance and code overhead.&lt;/p&gt;</content><author><name></name></author><category term="swift" /><category term="haptics" /><category term="iOS" /><summary type="html">Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the “Taptic Engine”, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.</summary></entry><entry><title type="html">TILSwift - callAsFunction</title><link href="https://ravitripathi.github.io/2020/12/13/callAsFunction.html" rel="alternate" type="text/html" title="TILSwift - callAsFunction" /><published>2020-12-13T20:32:00+05:30</published><updated>2020-12-13T20:32:00+05:30</updated><id>https://ravitripathi.github.io/2020/12/13/callAsFunction</id><content type="html" xml:base="https://ravitripathi.github.io/2020/12/13/callAsFunction.html">&lt;p&gt;Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt;.&lt;/p&gt;
+<p>Haptics are an underused gem which can enrich user experience and improve accessibility while adding a very low performance and code overhead.</p>]]></content><author><name></name></author><category term="swift" /><category term="haptics" /><category term="iOS" /><summary type="html"><![CDATA[Beginning with the iPhone 7, numerous Apple devices ship with a vibration motor dubbed the “Taptic Engine”, which can generate vibrations with great efficiency. A number of built-in UIKit components utilize it for adding haptic feedbacks on their interactions. iOS provides some APIs which allow you to use haptics for adding delightful feedbacks to your own animations. Let’s take a look at them and some interactions which could be a good place to use them.]]></summary></entry><entry><title type="html">TILSwift - callAsFunction</title><link href="https://ravitripathi.github.io/2020/12/13/callAsFunction.html" rel="alternate" type="text/html" title="TILSwift - callAsFunction" /><published>2020-12-13T20:32:00+05:30</published><updated>2020-12-13T20:32:00+05:30</updated><id>https://ravitripathi.github.io/2020/12/13/callAsFunction</id><content type="html" xml:base="https://ravitripathi.github.io/2020/12/13/callAsFunction.html"><![CDATA[<p>Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, <code class="language-plaintext highlighter-rouge">callAsFunction</code>.</p>
 
-&lt;p&gt;Introduced in &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md&quot;&gt;Swift 5.2&lt;/a&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt; provides a way to call values as functions. An instance of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;struct&lt;/code&gt; can be called as a function if it contains a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt; method.&lt;/p&gt;
+<p>Introduced in <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">Swift 5.2</a>, <code class="language-plaintext highlighter-rouge">callAsFunction</code> provides a way to call values as functions. An instance of a <code class="language-plaintext highlighter-rouge">class</code> or <code class="language-plaintext highlighter-rouge">struct</code> can be called as a function if it contains a <code class="language-plaintext highlighter-rouge">callAsFunction</code> method.</p>
 
-&lt;p&gt;Let’s dig into this by first starting off with a simple class, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JsonUtility&lt;/code&gt;, which can be initialized with a raw JSON &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;. It contains a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lookup(key:)&lt;/code&gt; function which can recursively check for the value for a given key in the JSON:&lt;/p&gt;
+<p>Let’s dig into this by first starting off with a simple class, <code class="language-plaintext highlighter-rouge">JsonUtility</code>, which can be initialized with a raw JSON <code class="language-plaintext highlighter-rouge">String</code>. It contains a <code class="language-plaintext highlighter-rouge">lookup(key:)</code> function which can recursively check for the value for a given key in the JSON:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtilityError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">JsonUtilityError</span><span class="p">:</span> <span class="kt">Error</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nf">initError</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span>
+<span class="p">}</span>
 
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtility&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;generatedDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+<span class="kd">class</span> <span class="kt">JsonUtility</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">generatedDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
 
-    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withString&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;using&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtilityError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;initError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Can&apos;t extract data from string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JSONSerialization&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;jsonObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtilityError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;initError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;JSON invalid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;generatedDict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dict&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    <span class="nf">init</span><span class="p">(</span><span class="n">withString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="kt">JsonUtilityError</span><span class="o">.</span><span class="nf">initError</span><span class="p">(</span><span class="s">"Can't extract data from string"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">let</span> <span class="nv">obj</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[])</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">dict</span> <span class="o">=</span> <span class="n">obj</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="kt">JsonUtilityError</span><span class="o">.</span><span class="nf">initError</span><span class="p">(</span><span class="s">"JSON invalid"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">generatedDict</span> <span class="o">=</span> <span class="n">dict</span>
+    <span class="p">}</span>
 
-    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generatedDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">generatedDict</span><span class="p">)</span>
+    <span class="p">}</span>
 
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inDict&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictKey&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dictKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;childDict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dictKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inDict</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">output</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span>
+        <span class="k">for</span> <span class="n">dictKey</span> <span class="k">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">dictKey</span> <span class="o">==</span> <span class="n">key</span> <span class="p">{</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">dictKey</span><span class="p">]</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">childDict</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">dictKey</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="p">{</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">childDict</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">output</span>
+    <span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;As you can see, when initialized with a string, this class converts the provided string into a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[String: Any]&lt;/code&gt; dictionary and assigns it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatedDict&lt;/code&gt;. A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lookup(key:)&lt;/code&gt; function searches the value for this key in this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatedDict&lt;/code&gt; recursively. This is what it would look like in action:&lt;/p&gt;
+<p>As you can see, when initialized with a string, this class converts the provided string into a <code class="language-plaintext highlighter-rouge">[String: Any]</code> dictionary and assigns it to <code class="language-plaintext highlighter-rouge">generatedDict</code>. A <code class="language-plaintext highlighter-rouge">lookup(key:)</code> function searches the value for this key in this <code class="language-plaintext highlighter-rouge">generatedDict</code> recursively. This is what it would look like in action:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">str</span> <span class="o">=</span> <span class="s">"""
 {
-    &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: 234896773,
-    &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Beaver&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,
-    &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: {
-      &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ravitripathi&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,
-      &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: 13906959,
-      &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//api.github.com/users/ravitripathi&quot;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;html_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://github.com/ravitripathi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;followers_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/followers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;starred_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/starred{/owner}{/repo}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;repos_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/repos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;events_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/events{/privacy}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;received_events_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/received_events&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;site_admin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+    "</span><span class="n">id</span><span class="s">": 234896773,
+    "</span><span class="n">name</span><span class="s">": "</span><span class="kt">Beaver</span><span class="s">",
+    "</span><span class="n">owner</span><span class="s">": {
+      "</span><span class="n">login</span><span class="s">": "</span><span class="n">ravitripathi</span><span class="s">",
+      "</span><span class="n">id</span><span class="s">": 13906959,
+      "</span><span class="n">url</span><span class="s">": "</span><span class="nv">https</span><span class="p">:</span><span class="c1">//api.github.com/users/ravitripathi",</span>
+      <span class="s">"html_url"</span><span class="p">:</span> <span class="s">"https://github.com/ravitripathi"</span><span class="p">,</span>
+      <span class="s">"followers_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/followers"</span><span class="p">,</span>
+      <span class="s">"starred_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/starred{/owner}{/repo}"</span><span class="p">,</span>
+      <span class="s">"repos_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/repos"</span><span class="p">,</span>
+      <span class="s">"events_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/events{/privacy}"</span><span class="p">,</span>
+      <span class="s">"received_events_url"</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/received_events"</span><span class="p">,</span>
+      <span class="s">"type"</span><span class="p">:</span> <span class="s">"User"</span><span class="p">,</span>
+      <span class="s">"site_admin"</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s">"""
 
 
 if let jsonUtil = try? JsonUtility(withString: str) {
-    let htmlUrlString = jsonUtil.lookup(key: &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_url&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;) //  &quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//github.com/ravitripathi&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    let htmlUrlString = jsonUtil.lookup(key: "</span><span class="n">html_url</span><span class="s">") //  "</span><span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/ravitripathi"</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;But what if we could remove the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.lookup&lt;/code&gt; call to obtain the urlString? &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt; allows you to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jsonUtil&lt;/code&gt; instance as a function call, allowing you to make your call syntax more concise.&lt;/p&gt;
+<p>But what if we could remove the <code class="language-plaintext highlighter-rouge">.lookup</code> call to obtain the urlString? <code class="language-plaintext highlighter-rouge">callAsFunction</code> allows you to use the <code class="language-plaintext highlighter-rouge">jsonUtil</code> instance as a function call, allowing you to make your call syntax more concise.</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtility&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;generatedDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withString&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">JsonUtility</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">generatedDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+    <span class="nf">init</span><span class="p">(</span><span class="n">withString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inDict&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">inDict</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 
-    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;callAsFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findValueForKey&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generatedDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    <span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findValueForKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">lookup</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="nv">inDict</span><span class="p">:</span> <span class="n">generatedDict</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-&lt;span class=&quot;c1&quot;&gt;//Usage&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;jsonUtil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JsonUtility&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;htmlUrlString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jsonUtil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;findValueForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//  &quot;https://github.com/ravitripathi&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="c1">//Usage</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">jsonUtil</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">JsonUtility</span><span class="p">(</span><span class="nv">withString</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">htmlUrlString</span> <span class="o">=</span> <span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findValueForKey</span><span class="p">:</span> <span class="s">"html_url"</span><span class="p">)</span> <span class="c1">//  "https://github.com/ravitripathi"</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Just like with normal functions, it is also possible to overload a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt; method:&lt;/p&gt;
+<p>Just like with normal functions, it is also possible to overload a <code class="language-plaintext highlighter-rouge">callAsFunction</code> method:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;callAsFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findValueForKey&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;callAsFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findKeyForValue&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findValueForKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="o">..</span> <span class="p">}</span>
+<span class="kd">func</span> <span class="nf">callAsFunction</span><span class="p">(</span><span class="n">findKeyForValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="o">..</span> <span class="p">}</span>
 
-&lt;span class=&quot;nf&quot;&gt;jsonUtil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;findValueForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//  &quot;https://github.com/ravitripathi&quot;&lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;jsonUtil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;findKeyForValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.github.com/users/ravitripathi/repos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &quot;repo_url&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
+<span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findValueForKey</span><span class="p">:</span> <span class="s">"html_url"</span><span class="p">)</span> <span class="c1">//  "https://github.com/ravitripathi"</span>
+<span class="nf">jsonUtil</span><span class="p">(</span><span class="nv">findKeyForValue</span><span class="p">:</span> <span class="s">"https://api.github.com/users/ravitripathi/repos"</span><span class="p">)</span> <span class="c1">// "repo_url"</span>
+</code></pre></div></div>
+<hr />
 
-&lt;h3 id=&quot;where-should-i-use-this&quot;&gt;Where should I use this?&lt;/h3&gt;
+<h3 id="where-should-i-use-this">Where should I use this?</h3>
 
-&lt;p&gt;Often, you might have many nominal types, that have a “primary method” that performs their main use. For example, a calculator class which mostly calls a specific function.&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;calculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;calculating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Often, you might have many nominal types, that have a “primary method” that performs their main use. For example, a calculator class which mostly calls a specific function.</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculator</span><span class="o">.</span><span class="nf">calculating</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;p&gt;Since a primary function like this one would be called frequently, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;callAsFunction&lt;/code&gt; simplifies the expression used for it.&lt;/p&gt;</content><author><name></name></author><category term="til-swift" /><summary type="html">Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, callAsFunction.</summary></entry><entry><title type="html">Using Environment Object for Reactive Views</title><link href="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" rel="alternate" type="text/html" title="Using Environment Object for Reactive Views" /><published>2020-08-02T00:00:00+05:30</published><updated>2020-08-02T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views</id><content type="html" xml:base="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html">&lt;p&gt;Traditionally, writing networking code for iOS involved creating one or more &lt;em&gt;Networking Classses&lt;/em&gt;. So, after you are done with creating your model objects, you might create a networking class which could look something like this:&lt;/p&gt;
+<p>Since a primary function like this one would be called frequently, <code class="language-plaintext highlighter-rouge">callAsFunction</code> simplifies the expression used for it.</p>]]></content><author><name></name></author><category term="til-swift" /><summary type="html"><![CDATA[Decided to start a series of (regular?) blog posts on interesting features in the Swift language. First up, callAsFunction.]]></summary></entry><entry><title type="html">Using Environment Object for Reactive Views</title><link href="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html" rel="alternate" type="text/html" title="Using Environment Object for Reactive Views" /><published>2020-08-02T00:00:00+05:30</published><updated>2020-08-02T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views</id><content type="html" xml:base="https://ravitripathi.github.io/2020/08/02/Using-Environment-Object-for-Reactive-Views.html"><![CDATA[<p>Traditionally, writing networking code for iOS involved creating one or more <em>Networking Classses</em>. So, after you are done with creating your model objects, you might create a networking class which could look something like this:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkManager&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;shared&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">NetworkManager</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">NetworkManager</span><span class="p">()</span>
     
-     &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;searchRepo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withName&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;@escaping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]?)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSessionConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dataTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requiredURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;httpResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;HTTPURLResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;299&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nf&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;decodedResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JSONDecoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nf&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decodedResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+     <span class="kd">func</span> <span class="nf">searchRepo</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Repo</span><span class="p">]?)</span><span class="o">-&gt;</span><span class="p">(</span><span class="kt">Void</span><span class="p">))</span> <span class="p">{</span>
+        <span class="o">...</span>
+        <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">requiredURL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">httpResponse</span> <span class="o">=</span> <span class="n">response</span> <span class="k">as?</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span>
+                  <span class="p">(</span><span class="mi">200</span><span class="o">...</span><span class="mi">299</span><span class="p">)</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">httpResponse</span><span class="o">.</span><span class="n">statusCode</span><span class="p">),</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">decodedResponse</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">JSONDecoder</span><span class="p">()</span><span class="o">.</span><span class="nf">decode</span><span class="p">([</span><span class="kt">Repo</span><span class="p">]</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="n">decodedResponse</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Or you might use a networking library like Alamofire for this purpose. Either way, the structure remains pretty much the same, a closure which provides you with the result of your call. But while working with SwiftUI, you might find this networking closure to be a bit clunky:&lt;/p&gt;
+<p>Or you might use a networking library like Alamofire for this purpose. Either way, the structure remains pretty much the same, a closure which provides you with the result of your call. But while working with SwiftUI, you might find this networking closure to be a bit clunky:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;YourView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">YourView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
     
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;viewModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewModel&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;@State&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    <span class="k">var</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="kt">ViewModel</span>
+    <span class="kd">@State</span> <span class="k">var</span> <span class="nv">list</span><span class="p">:</span> <span class="p">[</span><span class="kt">Repo</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//Your row&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAppear&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;viewModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchRepos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repoList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repoList&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+      <span class="kt">List</span><span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="p">{</span> <span class="n">repo</span> <span class="k">in</span>
+        <span class="c1">//Your row</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+            <span class="n">viewModel</span><span class="o">.</span><span class="n">fetchRepos</span> <span class="p">{</span> <span class="p">(</span><span class="n">repoList</span><span class="p">)</span> <span class="k">in</span>
+                <span class="k">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="n">repoList</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;You rely on settig a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@State&lt;/code&gt; property to refresh your view after the closure returns. Also, if you have multiple views which utilize the same datasource, you might end up either making the same API call mutliple times, or building a complex mesh of initialzer where you pass the required object from one view to another.&lt;/p&gt;
+<p>You rely on settig a <code class="language-plaintext highlighter-rouge">@State</code> property to refresh your view after the closure returns. Also, if you have multiple views which utilize the same datasource, you might end up either making the same API call mutliple times, or building a complex mesh of initialzer where you pass the required object from one view to another.</p>
 
-&lt;p&gt;However, SwiftUI has tools which make it easier for you to share data across views, and make reactive bindings around them to ensure your views update when the data changes. Which brings us to one such tool, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EnvironmentObject&lt;/code&gt;&lt;/p&gt;
+<p>However, SwiftUI has tools which make it easier for you to share data across views, and make reactive bindings around them to ensure your views update when the data changes. Which brings us to one such tool, the <code class="language-plaintext highlighter-rouge">EnvironmentObject</code></p>
 
-&lt;h2 id=&quot;environmentobject-and-networkstore&quot;&gt;EnvironmentObject and NetworkStore&lt;/h2&gt;
+<h2 id="environmentobject-and-networkstore">EnvironmentObject and NetworkStore</h2>
 
-&lt;p&gt;First, lets build a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NetworkStore&lt;/code&gt;&lt;/p&gt;
+<p>First, lets build a <code class="language-plaintext highlighter-rouge">NetworkStore</code></p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Combine&lt;/span&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Combine</span>
 
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ObservableObject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;@Published&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private(set)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;repos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;@Published&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private(set)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isLoadingRepos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+<span class="kd">class</span> <span class="kt">NetworkStore</span><span class="p">:</span> <span class="kt">ObservableObject</span> <span class="p">{</span>
+    <span class="kd">@Published</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">repos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Repo</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="kd">@Published</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isLoadingRepos</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
 
-    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isLoadingRepos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;NetworkManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shared&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getRepoList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;repos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isLoadingRepos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="kd">func</span> <span class="nf">fetch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="kt">NetworkManager</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">getRepoList</span> <span class="p">{</span> <span class="p">(</span><span class="n">repos</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Void</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">repos</span> <span class="o">=</span> <span class="n">repos</span> <span class="p">{</span>
+                <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="k">async</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">repos</span> <span class="o">=</span> <span class="n">repos</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="o">=</span> <span class="kc">false</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fetch&lt;/code&gt; gets the list of GitHub repos, and assigns it to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repos&lt;/code&gt; property. A boolean property &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isLoadingRepos&lt;/code&gt; keeps track of the status of the network call.&lt;/p&gt;
+<p>Calling <code class="language-plaintext highlighter-rouge">fetch</code> gets the list of GitHub repos, and assigns it to the <code class="language-plaintext highlighter-rouge">repos</code> property. A boolean property <code class="language-plaintext highlighter-rouge">isLoadingRepos</code> keeps track of the status of the network call.</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NetworkStore&lt;/code&gt; is an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ObservableObject&lt;/code&gt; allowing it to be passed along as an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EnvironmentObject&lt;/code&gt;. But what exactly is that? From the docs:&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">NetworkStore</code> is an <code class="language-plaintext highlighter-rouge">ObservableObject</code> allowing it to be passed along as an <code class="language-plaintext highlighter-rouge">EnvironmentObject</code>. But what exactly is that? From the docs:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;An environment object invalidates the current view whenever the observable object changes.&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>An environment object invalidates the current view whenever the observable object changes.</p>
+</blockquote>
 
-&lt;p&gt;Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.&lt;/p&gt;
+<p>Perfect for our usecase! An environment object can be injected into a view via its parent, or even be made available app-wide.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Injecting into a view:&lt;/p&gt;
+<ul>
+  <li>
+    <p>Injecting into a view:</p>
 
-    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;YourView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environmentObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Injecting app-wide:&lt;/p&gt;
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">YourView</span><span class="p">()</span><span class="o">.</span><span class="nf">environmentObject</span><span class="p">(</span><span class="kt">NetworkStore</span><span class="p">())</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Injecting app-wide:</p>
 
-    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// You can also use the App/Scene Delegate for injecting an environment object.&lt;/span&gt;
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Note: The App Struct is a replacement for the AppDelegate, available from iOS 14+. </span>
+<span class="c1">// You can also use the App/Scene Delegate for injecting an environment object.</span>
   
-&lt;span class=&quot;kd&quot;&gt;@main&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;YourAppName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Scene&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;WindowGroup&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environmentObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<span class="kd">@main</span>
+<span class="kd">struct</span> <span class="kt">YourAppName</span><span class="p">:</span> <span class="kt">App</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">Scene</span> <span class="p">{</span>
+        <span class="kt">WindowGroup</span> <span class="p">{</span>
+            <span class="kt">ContentView</span><span class="p">()</span>
+                <span class="o">.</span><span class="nf">environmentObject</span><span class="p">(</span><span class="kt">NetworkStore</span><span class="p">())</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-&lt;p&gt;You can then use it any number of your views:&lt;/p&gt;
+<p>You can then use it any number of your views:</p>
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MainView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;@EnvironmentObject&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NetworkStore&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ScrollView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;showsIndicators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isLoadingRepos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;kt&quot;&gt;ProgressView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;progressViewStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CircularProgressViewStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-                    &lt;span class=&quot;c1&quot;&gt;// add a view&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAppear&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;netStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MainView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kd">@EnvironmentObject</span> <span class="k">var</span> <span class="nv">netStore</span><span class="p">:</span> <span class="kt">NetworkStore</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">ScrollView</span><span class="p">(</span><span class="o">.</span><span class="n">horizontal</span><span class="p">,</span> <span class="nv">showsIndicators</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">HStack</span><span class="p">{</span>
+                <span class="k">if</span> <span class="n">netStore</span><span class="o">.</span><span class="n">isLoadingRepos</span> <span class="p">{</span>
+                    <span class="kt">ProgressView</span><span class="p">()</span>
+                        <span class="o">.</span><span class="nf">progressViewStyle</span><span class="p">(</span><span class="kt">CircularProgressViewStyle</span><span class="p">())</span>
+                <span class="p">}</span>
+                <span class="kt">ForEach</span><span class="p">(</span><span class="n">netStore</span><span class="o">.</span><span class="n">repos</span><span class="p">)</span> <span class="p">{</span> <span class="n">repo</span> <span class="k">in</span>
+                    <span class="c1">// add a view</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+          <span class="n">netStore</span><span class="o">.</span><span class="nf">fetch</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;This frees you from making networking call in a specific view. You can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netStore.fetch()&lt;/code&gt; from any view, and every view which requires the repository list automatically gets updated, as long as it uses the NetworkStore environment object.&lt;/p&gt;
+<p>This frees you from making networking call in a specific view. You can call <code class="language-plaintext highlighter-rouge">netStore.fetch()</code> from any view, and every view which requires the repository list automatically gets updated, as long as it uses the NetworkStore environment object.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;SwiftUI and Combine complement each other in many ways, and can be mixed and matched to build complex, reactive views with  reduced efforts. You can check out my &lt;a href=&quot;https://github.com/ravitripathi/GitBrowser&quot;&gt;GitBrowser&lt;/a&gt; app, a simple Github client which displays your followers and public repositories, built on pure SwiftUI (Requires Xcode 12 beta to run).&lt;/p&gt;</content><author><name></name></author><category term="swiftui" /><category term="combine" /><summary type="html">Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:</summary></entry><entry><title type="html">iOS Localization Best Practices</title><link href="https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices.html">&lt;p&gt;&lt;img src=&quot;/assets/postAssets/header.jpeg&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+<p>SwiftUI and Combine complement each other in many ways, and can be mixed and matched to build complex, reactive views with  reduced efforts. You can check out my <a href="https://github.com/ravitripathi/GitBrowser">GitBrowser</a> app, a simple Github client which displays your followers and public repositories, built on pure SwiftUI (Requires Xcode 12 beta to run).</p>]]></content><author><name></name></author><category term="swiftui" /><category term="combine" /><summary type="html"><![CDATA[Traditionally, writing networking code for iOS involved creating one or more Networking Classses. So, after you are done with creating your model objects, you might create a networking class which could look something like this:]]></summary></entry><entry><title type="html">iOS Localization Best Practices</title><link href="https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices.html" rel="alternate" type="text/html" title="iOS Localization Best Practices" /><published>2018-04-30T00:00:00+05:30</published><updated>2018-04-30T00:00:00+05:30</updated><id>https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices</id><content type="html" xml:base="https://ravitripathi.github.io/2018/04/30/ios-localization-best-practices.html"><![CDATA[<p><img src="/assets/postAssets/header.jpeg" alt="Header" /></p>
 
-&lt;p&gt;iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.&lt;/p&gt;
+<p>iOS provides a brilliant framework for localising your app. While getting started is easy, few tricks can make your app more suited for a global audience. I visited Apple’s App Accelerator Center based in Bangalore for a session on Best Localization practises. Here are some of my key takeaways.</p>
 
-&lt;h3 id=&quot;replace-translations-to-minimise-character-length-variation&quot;&gt;Replace translations to minimise character length variation&lt;/h3&gt;
+<h3 id="replace-translations-to-minimise-character-length-variation">Replace translations to minimise character length variation</h3>
 
-&lt;p&gt;Consider the translation for word “picture” in different languages:&lt;/p&gt;
+<p>Consider the translation for word “picture” in different languages:</p>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Language&lt;/th&gt;
-      &lt;th&gt;Word&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;English&lt;/td&gt;
-      &lt;td&gt;picture&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Indonesian&lt;/td&gt;
-      &lt;td&gt;gambar&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;French&lt;/td&gt;
-      &lt;td&gt;image&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Russian&lt;/td&gt;
-      &lt;td&gt;картина&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Word</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>English</td>
+      <td>picture</td>
+    </tr>
+    <tr>
+      <td>Indonesian</td>
+      <td>gambar</td>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>image</td>
+    </tr>
+    <tr>
+      <td>Russian</td>
+      <td>картина</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;Notice how the count and heigh of characters varies a lot for different languages for the same word. Now if we replace the word picture with an equivalent word “photo”, this is how the translations look:&lt;/p&gt;
+<p>Notice how the count and heigh of characters varies a lot for different languages for the same word. Now if we replace the word picture with an equivalent word “photo”, this is how the translations look:</p>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Language&lt;/th&gt;
-      &lt;th&gt;Word&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;English&lt;/td&gt;
-      &lt;td&gt;photo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Indonesian&lt;/td&gt;
-      &lt;td&gt;foto&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;French&lt;/td&gt;
-      &lt;td&gt;photo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Russian&lt;/td&gt;
-      &lt;td&gt;Фото&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Word</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>English</td>
+      <td>photo</td>
+    </tr>
+    <tr>
+      <td>Indonesian</td>
+      <td>foto</td>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>photo</td>
+    </tr>
+    <tr>
+      <td>Russian</td>
+      <td>Фото</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.&lt;/p&gt;
+<p>Notice how the character count, as well as the space occupied by the characters is now similar for different languages. This helps in make your UI look consistent across different screen sizes.</p>
 
-&lt;h3 id=&quot;culture-considerations-because-localization-goes-beyond-translations&quot;&gt;Culture considerations: Because localization goes beyond translations&lt;/h3&gt;
+<h3 id="culture-considerations-because-localization-goes-beyond-translations">Culture considerations: Because localization goes beyond translations</h3>
 
-&lt;p&gt;An interesting case study in localizing an app for a region is the default stock market app on iOS:&lt;/p&gt;
+<p>An interesting case study in localizing an app for a region is the default stock market app on iOS:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg&quot; width=&quot;40%&quot; /&gt;
-&lt;img src=&quot;/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/1_Hl7ni4uhBczbS7jhUcKcmw.jpeg" width="40%" />
+<img src="/assets/postAssets/1_n6r7x_pMbMGRG8g3f2ZEOw.jpeg" width="40%" /></p>
 
-&lt;p&gt;Chinese consider the colour red to be auspicious, hence the colours are switched for Chinese users to indicate positive stocks.
-Thus, if you are building an app which would be made available across nations, it’s always a good idea to take into account the variation in cultures, apart from simply translating your strings.&lt;/p&gt;
+<p>Chinese consider the colour red to be auspicious, hence the colours are switched for Chinese users to indicate positive stocks.
+Thus, if you are building an app which would be made available across nations, it’s always a good idea to take into account the variation in cultures, apart from simply translating your strings.</p>
 
-&lt;h3 id=&quot;colours&quot;&gt;Colours&lt;/h3&gt;
+<h3 id="colours">Colours</h3>
 
-&lt;p&gt;colorify.it is a free tool by which you can analyse the dominant colours present on a website. I decided to use it to determine the dominant colours on the App Store page for the &lt;a href=&quot;https://www.apple.com/itunes/charts/top-grossing-apps/&quot;&gt;Top Grosssing Apps&lt;/a&gt;. Here’s what I found:&lt;/p&gt;
+<p>colorify.it is a free tool by which you can analyse the dominant colours present on a website. I decided to use it to determine the dominant colours on the App Store page for the <a href="https://www.apple.com/itunes/charts/top-grossing-apps/">Top Grosssing Apps</a>. Here’s what I found:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_butRNlxuP2hsi91l0shNzA.png&quot; alt=&quot;colorify.it&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/1_butRNlxuP2hsi91l0shNzA.png" alt="colorify.it" /></p>
 
-&lt;p&gt;Blue is the colour of choice for a whole bunch of top rated apps. And there is a sound reason for it. According to &lt;a href=&quot;https://link.springer.com/article/10.1007/s11747-010-0245-y?utmx=5-18&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.2928&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;research&lt;/a&gt; papers, the colour “blue” signifies qualities like &lt;em&gt;calmness&lt;/em&gt;, &lt;em&gt;relaxation&lt;/em&gt; and &lt;em&gt;friendliness&lt;/em&gt;. Thus, it becomes important to utilise the colour pallets to help users understand the intent behind the actions made available to them in your app.&lt;/p&gt;
+<p>Blue is the colour of choice for a whole bunch of top rated apps. And there is a sound reason for it. According to <a href="https://link.springer.com/article/10.1007/s11747-010-0245-y?utmx=5-18">several</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.2928&amp;rep=rep1&amp;type=pdf">research</a> papers, the colour “blue” signifies qualities like <em>calmness</em>, <em>relaxation</em> and <em>friendliness</em>. Thus, it becomes important to utilise the colour pallets to help users understand the intent behind the actions made available to them in your app.</p>
 
-&lt;p&gt;However, it is also important not to go overboard with colours. 1 in 12 men and 1 in 200 women across the world are &lt;a href=&quot;http://www.colourblindawareness.org/colour-blindness/&quot;&gt;colour blind&lt;/a&gt;. Thus, important sections in your app should be accompanied by a textual or graphical context, rather than purely relying on colours to convey the meaning.&lt;/p&gt;
+<p>However, it is also important not to go overboard with colours. 1 in 12 men and 1 in 200 women across the world are <a href="http://www.colourblindawareness.org/colour-blindness/">colour blind</a>. Thus, important sections in your app should be accompanied by a textual or graphical context, rather than purely relying on colours to convey the meaning.</p>
 
-&lt;h3 id=&quot;contrast&quot;&gt;Contrast&lt;/h3&gt;
+<h3 id="contrast">Contrast</h3>
 
-&lt;p&gt;Probably the most confusing part for a developer is to decide which colour combinations should be used in displaying various UI elements.&lt;/p&gt;
+<p>Probably the most confusing part for a developer is to decide which colour combinations should be used in displaying various UI elements.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/postAssets/1_SVtl-UjCnqotFqpiVwkYqw.png&quot; alt=&quot;Contrast buttons&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/postAssets/1_SVtl-UjCnqotFqpiVwkYqw.png" alt="Contrast buttons" /></p>
 
-&lt;p&gt;If you think that the button on right looks better, you are in sync with Apple’s &lt;a href=&quot;https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/&quot;&gt;suggested guidelines&lt;/a&gt; for colour contrasts. The button on the right has a contrast ratio of nearly 9.6:1 which is inline which Apple’s suggested minimum contrast ratio of 4.5:1. Having appropriate contrast levels enables users to clearly distinguish between various UI elements.&lt;/p&gt;
+<p>If you think that the button on right looks better, you are in sync with Apple’s <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/">suggested guidelines</a> for colour contrasts. The button on the right has a contrast ratio of nearly 9.6:1 which is inline which Apple’s suggested minimum contrast ratio of 4.5:1. Having appropriate contrast levels enables users to clearly distinguish between various UI elements.</p>
 
-&lt;p&gt;Aviah Morag, a localization expert at Apple, shared a very valuable piece of advice with us :&lt;/p&gt;
+<p>Aviah Morag, a localization expert at Apple, shared a very valuable piece of advice with us :</p>
 
-&lt;h3 id=&quot;localisation-is-a-form-of-accessibility&quot;&gt;Localisation is a form of accessibility.&lt;/h3&gt;
+<h3 id="localisation-is-a-form-of-accessibility">Localisation is a form of accessibility.</h3>
 
-&lt;p&gt;Just like high-contrast modes or modes which magnify your screen allow users to use or access your app, localisation enables people to use you app if they do not speak your language. Colours and contrasts tweaked according to the user-base enable people to access your app in a way which makes them comfortable.&lt;/p&gt;
+<p>Just like high-contrast modes or modes which magnify your screen allow users to use or access your app, localisation enables people to use you app if they do not speak your language. Colours and contrasts tweaked according to the user-base enable people to access your app in a way which makes them comfortable.</p>
 
-&lt;h3 id=&quot;formatters-to-the-rescue&quot;&gt;Formatters to the Rescue!&lt;/h3&gt;
+<h3 id="formatters-to-the-rescue">Formatters to the Rescue!</h3>
 
-&lt;p&gt;The localization techniques baked right into iOS can be tapped to produce more consistent, easy-to-manage localized strings. So it’s important to leverage them to smoothen out your localization process.&lt;/p&gt;
+<p>The localization techniques baked right into iOS can be tapped to produce more consistent, easy-to-manage localized strings. So it’s important to leverage them to smoothen out your localization process.</p>
 
-&lt;p&gt;For example, while my name is written as Ravi Tripathi in major regions of the world, some countries, or even specific regions in a country, follow different convention. Thus my name should be displayed as Tripathi Ravi if say, my app were to be distributed in Japan.&lt;/p&gt;
+<p>For example, while my name is written as Ravi Tripathi in major regions of the world, some countries, or even specific regions in a country, follow different convention. Thus my name should be displayed as Tripathi Ravi if say, my app were to be distributed in Japan.</p>
 
-&lt;p&gt;Thus, it’s a good idea to use the &lt;a href=&quot;https://developer.apple.com/documentation/foundation/personnamecomponents&quot;&gt;PersonNameComponent&lt;/a&gt; formatter to get the job done. Just assign the components of a user’s name and your app would reflect the naming conventions used in a region.&lt;/p&gt;
+<p>Thus, it’s a good idea to use the <a href="https://developer.apple.com/documentation/foundation/personnamecomponents">PersonNameComponent</a> formatter to get the job done. Just assign the components of a user’s name and your app would reflect the naming conventions used in a region.</p>
 
-&lt;p&gt;It’s also important how you would use a formatter. For instance, it’s always a good practise to use in-built formats, rather than hard-coding it.&lt;/p&gt;
+<p>It’s also important how you would use a formatter. For instance, it’s always a good practise to use in-built formats, rather than hard-coding it.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var formatter = DateFormatter ()
-formatter.timeStyle = &quot;hh mm&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var formatter = DateFormatter ()
+formatter.timeStyle = "hh mm"
 
 //Instead use this:
 
 var formatter = DateFormatter ()
 formatter.timeStyle = .shortStyle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Another use for localization aware formatters is when dealing with &lt;a href=&quot;https://developer.apple.com/documentation/foundation/units_and_measurement&quot;&gt;measurements and units&lt;/a&gt;. You can add, subtract or perform any other arithmetic operation on different measurement scales by using &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurement&quot;&gt;Measurement&lt;/a&gt; classes, which allow hassle-free unit interoperability.&lt;/p&gt;
+<p>Another use for localization aware formatters is when dealing with <a href="https://developer.apple.com/documentation/foundation/units_and_measurement">measurements and units</a>. You can add, subtract or perform any other arithmetic operation on different measurement scales by using <a href="https://developer.apple.com/documentation/foundation/measurement">Measurement</a> classes, which allow hassle-free unit interoperability.</p>
 
-&lt;h3 id=&quot;xliff--the-polyglots-format&quot;&gt;XLIFF : The Polyglot’s format&lt;/h3&gt;
+<h3 id="xliff--the-polyglots-format">XLIFF : The Polyglot’s format</h3>
 
-&lt;p&gt;Any discussion on iOS localization tricks is incomplete without XLIFF. It’s an is an XML-based format by which you can store and share translations without hassle. XCode provides an easy method for updating your app with appropriate localized strings. All you need to do is export your existing translations as an XLIFF file. You can then pass it to a translator, who can update it with new translations, which you can then re-import to update your translations. As this is a globally accepted standard, and does not require any coding skills, it essentially separates the job of translators and coders, making it easier for them to focus on what they know the best.&lt;/p&gt;
+<p>Any discussion on iOS localization tricks is incomplete without XLIFF. It’s an is an XML-based format by which you can store and share translations without hassle. XCode provides an easy method for updating your app with appropriate localized strings. All you need to do is export your existing translations as an XLIFF file. You can then pass it to a translator, who can update it with new translations, which you can then re-import to update your translations. As this is a globally accepted standard, and does not require any coding skills, it essentially separates the job of translators and coders, making it easier for them to focus on what they know the best.</p>
 
-&lt;p&gt;For a more clear insight on how to use XLIFFs in you projects, check out Apple’s official documentation &lt;a href=&quot;https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<p>For a more clear insight on how to use XLIFFs in you projects, check out Apple’s official documentation <a href="https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html">here</a>.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Localizing an app is a challenge which is often deemed difficult to overcome. However, which the ever-expanding scope of iOS support for localized text and resources, building your app for a global audience has never been easier.&lt;/p&gt;</content><author><name></name></author><category term="ios-tips" /><summary type="html"></summary></entry></feed>
+<p>Localizing an app is a challenge which is often deemed difficult to overcome. However, which the ever-expanding scope of iOS support for localized text and resources, building your app for a global audience has never been easier.</p>]]></content><author><name></name></author><category term="ios-tips" /><summary type="html"><![CDATA[]]></summary></entry></feed>

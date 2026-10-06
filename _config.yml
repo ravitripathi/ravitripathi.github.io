@@ -11,6 +11,9 @@ github_username:  ravitripathi
 remote_theme: thelehhman/plainwhite-jekyll
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 plainwhite:
   name: Ravi Tripathi
